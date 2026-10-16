@@ -1,0 +1,1904 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>التقويم المدرسي للعام ٢٠٢٦</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ================= Tokens ================= */
+:root{
+  --bg:#FAF7EF; --surface:#FFFFFF; --surface-2:#F3EEE1; --surface-3:#EAF1EC;
+  --ink:#14231C; --ink-2:#2E3D35; --muted:#5A675F; --line:#E5DDCA; --line-2:#D6CCB4;
+  --green:#0E3B2C; --green-2:#185040; --green-3:#2A6A54; --on-green:#F7F3E8; --on-green-2:#C9D5CD;
+  --gold:#86661F; --gold-line:#C2A465; --gold-soft:#F1E7CC;
+  --btn-bg:#185040; --btn-ink:#FFFFFF; --btn-hover:#0E3B2C;
+  --focus:#B8913F;
+  --shadow-1:0 1px 2px rgba(14,59,44,.06),0 4px 14px -6px rgba(14,59,44,.12);
+  --shadow-2:0 2px 4px rgba(14,59,44,.06),0 18px 36px -18px rgba(14,59,44,.32);
+  --r-sm:10px; --r-md:14px; --r-lg:20px;
+  --fs-xs:.8125rem; --fs-sm:.9375rem; --fs-base:1.0625rem; --fs-md:1.1875rem;
+  --fs-lg:clamp(1.3rem,1.15rem + .6vw,1.6rem);
+  --fs-xl:clamp(1.6rem,1.3rem + 1.2vw,2.25rem);
+  --fs-2xl:clamp(1.75rem,1.35rem + 1.6vw,2.6rem);
+  --sidebar:292px;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B1F18; --surface:#11291F; --surface-2:#173328; --surface-3:#173328;
+    --ink:#F0EBDD; --ink-2:#DCD6C6; --muted:#AEB9B1; --line:#244237; --line-2:#2F5245;
+    --green:#071811; --green-2:#1F5C48; --green-3:#2A6A54; --on-green:#F0EBDD; --on-green-2:#B9C6BD;
+    --gold:#D6B670; --gold-line:#A88C4E; --gold-soft:#2E3A27;
+    --btn-bg:#D6B670; --btn-ink:#10211A; --btn-hover:#E3C887;
+    --focus:#E3C887;
+    --shadow-1:0 1px 2px rgba(0,0,0,.3); --shadow-2:0 18px 36px -18px rgba(0,0,0,.7);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B1F18; --surface:#11291F; --surface-2:#173328; --surface-3:#173328;
+  --ink:#F0EBDD; --ink-2:#DCD6C6; --muted:#AEB9B1; --line:#244237; --line-2:#2F5245;
+  --green:#071811; --green-2:#1F5C48; --green-3:#2A6A54; --on-green:#F0EBDD; --on-green-2:#B9C6BD;
+  --gold:#D6B670; --gold-line:#A88C4E; --gold-soft:#2E3A27;
+  --btn-bg:#D6B670; --btn-ink:#10211A; --btn-hover:#E3C887;
+  --focus:#E3C887;
+  --shadow-1:0 1px 2px rgba(0,0,0,.3); --shadow-2:0 18px 36px -18px rgba(0,0,0,.7);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans Arabic","Tajawal","Segoe UI",Tahoma,Arial,sans-serif;
+  font-size:var(--fs-base);line-height:1.85;overflow-x:hidden;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{line-height:1.45;margin:0;font-weight:700}
+p{margin:0}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:8px}
+button{font:inherit;color:inherit}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;top:-60px;right:16px;z-index:100;background:var(--btn-bg);color:var(--btn-ink);padding:10px 16px;border-radius:var(--r-sm);text-decoration:none;font-weight:600}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 12px)}
+
+/* ================= Shell ================= */
+.shell{display:grid;grid-template-columns:var(--sidebar) minmax(0,1fr);min-height:100vh}
+.sidebar{background:var(--green);color:var(--on-green);position:sticky;top:0;height:100vh;
+  display:flex;flex-direction:column;padding:30px 16px 22px;overflow-y:auto;border-inline-end:1px solid rgba(194,164,101,.25)}
+.brand{display:flex;gap:12px;align-items:center;padding:0 10px 22px;margin-bottom:14px;border-bottom:1px solid rgba(240,235,221,.12)}
+.brand .seal{flex:none;width:42px;height:42px;border-radius:12px;border:1px solid rgba(194,164,101,.55);display:grid;place-items:center;color:#D8BC7C}
+.brand small{display:block;color:var(--on-green-2);font-size:var(--fs-xs);line-height:1.6}
+.brand strong{display:block;font-size:.98rem;font-weight:600;line-height:1.55;color:#fff}
+.nav{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.nav a{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-radius:var(--r-sm);
+  text-decoration:none;font-size:var(--fs-sm);line-height:1.65;color:var(--on-green-2);position:relative}
+.nav a:hover{background:rgba(255,255,255,.06);color:#fff}
+.nav a[aria-current="page"]{background:rgba(240,235,221,.11);color:#fff;font-weight:600}
+.nav a[aria-current="page"]::before{content:"";position:absolute;inset-inline-start:0;top:9px;bottom:9px;width:3px;border-radius:3px;background:#D8BC7C}
+.nav .num{flex:none;width:1.4em;color:#D8BC7C;font-weight:600;text-align:center}
+.nav .ico{flex:none;width:1.4em;display:grid;place-items:center;margin-top:3px;color:#D8BC7C}
+.nav-sub{list-style:none;margin:2px 0 6px;padding:0 0 0 0;padding-inline-start:34px;display:grid;gap:2px;position:relative}
+.nav-sub::before{content:"";position:absolute;inset-block:4px;inset-inline-start:22px;width:1px;background:rgba(216,188,124,.35)}
+.nav-sub a{padding:7px 12px;font-size:var(--fs-xs);border-radius:8px}
+.nav a.in-section{color:#fff;font-weight:600}
+.nav .home-link{margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid rgba(240,235,221,.08)}
+.side-foot{margin-top:auto;padding:18px 12px 0;font-size:var(--fs-xs);color:var(--on-green-2);display:flex;gap:8px;align-items:center}
+.side-close{display:none}
+
+.topbar{display:none}
+.main{min-width:0;display:flex;flex-direction:column}
+.masthead{padding:30px clamp(20px,4vw,56px) 0;max-width:1320px;width:100%}
+.masthead h1{font-size:var(--fs-2xl);color:var(--green);letter-spacing:0;line-height:1.35}
+:root[data-theme="dark"] .masthead h1{color:var(--ink)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .masthead h1{color:var(--ink)}}
+.masthead .rule{display:flex;align-items:center;gap:0;margin-top:14px}
+.masthead .rule::before{content:"";height:3px;width:56px;background:var(--gold-line);border-radius:2px}
+.masthead .rule::after{content:"";height:1px;flex:1;background:var(--line)}
+.masthead.compact h1{font-size:clamp(1.2rem,1.05rem + .6vw,1.5rem);color:var(--muted);font-weight:600}
+.content{padding:30px clamp(20px,4vw,56px) 72px;flex:1;max-width:1320px;width:100%}
+.content:focus{outline:none}
+.site-foot{padding:22px clamp(20px,4vw,56px);border-top:1px solid var(--line);color:var(--muted);font-size:var(--fs-sm)}
+
+/* ================= Buttons ================= */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 18px;border-radius:var(--r-sm);
+  font-weight:600;font-size:var(--fs-sm);text-decoration:none;cursor:pointer;border:1.5px solid transparent;line-height:1.4;text-align:center;
+  transition:background-color .15s,border-color .15s,color .15s}
+.btn-primary{background:var(--btn-bg);color:var(--btn-ink)}
+.btn-primary:hover{background:var(--btn-hover)}
+.btn-ghost{background:var(--surface);border-color:var(--line-2);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--gold-line);background:var(--surface-2)}
+.btn svg{flex:none}
+.btn-sm{min-height:42px;padding:8px 14px;font-size:var(--fs-sm)}
+
+/* ================= Home: hero ================= */
+.hero{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.15fr);gap:clamp(28px,4.5vw,72px);align-items:center}
+.hero-text h2{font-size:var(--fs-xl);color:var(--ink);margin-bottom:14px}
+.hero-text p{font-size:clamp(1.06rem,1rem + .35vw,1.25rem);color:var(--muted);max-width:32ch;line-height:1.95}
+.hero-actions{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+
+.photo-col{min-width:0}
+.photo-frame{position:relative;margin:0;padding:10px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-2)}
+.photo-frame::before,.photo-frame::after{content:"";position:absolute;width:38px;height:38px;pointer-events:none}
+.photo-frame::before{top:-7px;left:-7px;border-top:2px solid var(--gold-line);border-left:2px solid var(--gold-line);border-top-left-radius:14px}
+.photo-frame::after{bottom:-7px;right:-7px;border-bottom:2px solid var(--gold-line);border-right:2px solid var(--gold-line);border-bottom-right-radius:14px}
+.photo-frame img{width:100%;aspect-ratio:1280/712;object-fit:cover;object-position:center 42%;border-radius:12px;background:var(--surface-2)}
+.school-card{margin-top:16px;background:var(--green);color:var(--on-green);border-radius:var(--r-md);padding:16px 20px;display:flex;gap:16px;align-items:center}
+.school-card .seal{flex:none;width:46px;height:46px;border-radius:12px;border:1px solid rgba(194,164,101,.6);display:grid;place-items:center;color:#D8BC7C}
+.school-card .auth{color:var(--on-green-2);font-size:var(--fs-sm);line-height:1.7}
+.school-card .name{font-weight:700;font-size:var(--fs-md);line-height:1.6;color:#fff}
+
+/* ================= Home: sections ================= */
+.section{margin-top:clamp(56px,7vw,92px);scroll-margin-top:90px}
+.section-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:10px 20px;margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.section-head h2{font-size:var(--fs-lg)}
+.section-head h2:focus{outline:none}
+.section-head p{color:var(--muted);font-size:var(--fs-sm)}
+
+.perf{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(14px,3vw,32px);box-shadow:var(--shadow-1);display:grid;place-items:center}
+.perf-img{border:0;padding:clamp(8px,2vw,20px);background:#fff;cursor:zoom-in;border-radius:var(--r-md);width:100%;max-width:640px}
+.perf-img img{width:100%;height:auto;margin:0 auto}
+
+.domains{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (min-width:1560px){.domains{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.domain-card{--lift:0px;position:relative;display:flex;flex-direction:column;min-width:0;text-decoration:none;color:inherit;
+  background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;isolation:isolate;
+  box-shadow:var(--shadow-1);transform:translateY(var(--lift));
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s}
+.domain-card:hover,.domain-card:focus-visible{--lift:-6px;box-shadow:0 26px 48px -24px rgba(14,59,44,.45);border-color:var(--gold-line)}
+.domain-card:focus-visible{outline:3px solid var(--focus);outline-offset:4px;border-radius:22px}
+.domain-card:active{--lift:-2px}
+.domain-card{--band:118px}
+.dc-band{position:relative;height:var(--band);background:linear-gradient(140deg,#0E3B2C 0%,#185040 62%,#245F4B 100%);overflow:hidden}
+.dc-band::before{content:"";position:absolute;inset:0;opacity:.18;
+  background-image:linear-gradient(45deg,rgba(216,188,124,.9) 1px,transparent 1px),linear-gradient(-45deg,rgba(216,188,124,.9) 1px,transparent 1px);
+  background-size:22px 22px;mask-image:linear-gradient(to left,#000 0%,transparent 75%);-webkit-mask-image:linear-gradient(to left,#000 0%,transparent 75%)}
+.dc-band::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.14) 50%,transparent 70%);
+  transform:translateX(120%);transition:transform .8s ease}
+.domain-card:hover .dc-band::after,.domain-card:focus-visible .dc-band::after{transform:translateX(-120%)}
+.dc-num{position:absolute;left:18px;bottom:-22px;font-size:6.2rem;font-weight:700;line-height:1;color:transparent;
+  -webkit-text-stroke:1.5px rgba(216,188,124,.55);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.domain-card:hover .dc-num,.domain-card:focus-visible .dc-num{transform:translateY(-8px)}
+.dc-ic{position:absolute;right:20px;top:calc(var(--band) - 30px);width:60px;height:60px;border-radius:18px;background:var(--surface);color:var(--green-2);
+  display:grid;place-items:center;box-shadow:0 10px 22px -10px rgba(14,59,44,.5);border:1px solid var(--line);z-index:1;
+  transition:transform .4s cubic-bezier(.2,.8,.2,1),background-color .3s,color .3s}
+.domain-card:hover .dc-ic,.domain-card:focus-visible .dc-ic{transform:translateY(-4px) rotate(-6deg);background:var(--gold-soft)}
+.dc-body{position:relative;padding:40px 22px 0;display:flex;flex-direction:column;gap:12px;flex:1}
+.dc-chips{margin-bottom:8px}
+.dc-idx{font-size:var(--fs-xs);font-weight:600;color:var(--gold)}
+.domain-card h3{font-size:var(--fs-md);color:var(--ink);line-height:1.5}
+.dc-chips{display:flex;flex-wrap:wrap;gap:8px}
+.dc-chip{display:inline-flex;align-items:baseline;gap:6px;padding:4px 12px;border-radius:999px;background:var(--surface-2);font-size:var(--fs-xs);color:var(--ink-2);line-height:1.8}
+.dc-chip b{font-size:.98rem;color:var(--green-2)}
+.dc-cta{margin:auto -22px 0;padding:14px 22px;display:flex;justify-content:space-between;align-items:center;gap:10px;
+  border-top:1px solid var(--line);font-weight:600;font-size:var(--fs-sm);color:var(--green-2);position:relative;overflow:hidden;z-index:0}
+.dc-cta::before{content:"";position:absolute;inset:0;background:var(--green-2);transform:scaleX(0);transform-origin:right;transition:transform .4s cubic-bezier(.2,.8,.2,1);z-index:-1}
+.domain-card:hover .dc-cta,.domain-card:focus-visible .dc-cta{color:#fff}
+.domain-card:hover .dc-cta::before,.domain-card:focus-visible .dc-cta::before{transform:scaleX(1)}
+.dc-arrow{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;border:1.5px solid currentColor;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.domain-card:hover .dc-arrow,.domain-card:focus-visible .dc-arrow{transform:translateX(-5px)}
+:root[data-theme="dark"] .dc-ic{color:var(--gold)}
+:root[data-theme="dark"] .dc-chip b,:root[data-theme="dark"] .dc-cta{color:var(--gold)}
+:root[data-theme="dark"] .dc-cta::before{background:var(--gold)}
+:root[data-theme="dark"] .domain-card:hover .dc-cta,:root[data-theme="dark"] .domain-card:focus-visible .dc-cta{color:#10211A}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .dc-ic{color:var(--gold)}
+  :root:not([data-theme="light"]) .dc-chip b,:root:not([data-theme="light"]) .dc-cta{color:var(--gold)}
+  :root:not([data-theme="light"]) .dc-cta::before{background:var(--gold)}
+  :root:not([data-theme="light"]) .domain-card:hover .dc-cta,:root:not([data-theme="light"]) .domain-card:focus-visible .dc-cta{color:#10211A}
+}
+/* دخول البطاقات مرة واحدة عند عرض القسم */
+.domains.reveal .domain-card{opacity:0;transform:translateY(22px)}
+.domains.reveal.in .domain-card{opacity:1;transform:translateY(var(--lift));
+  transition:opacity .6s ease var(--d,0s),transform .6s cubic-bezier(.2,.8,.2,1) var(--d,0s),box-shadow .35s,border-color .35s}
+.domains.reveal.in.done .domain-card{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s}
+
+/* ================= Inner pages ================= */
+.crumbs{font-size:var(--fs-sm);color:var(--muted);margin-bottom:14px}
+.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 8px}
+.crumbs li{display:flex;align-items:center;gap:8px}
+.crumbs li+li::before{content:"";width:6px;height:6px;border-top:1.5px solid var(--gold-line);border-left:1.5px solid var(--gold-line);transform:rotate(-45deg)}
+.crumbs a{text-decoration:none;padding:4px 0}
+.crumbs a:hover{color:var(--ink);text-decoration:underline}
+.crumbs [aria-current]{color:var(--ink);font-weight:600}
+.page-title{font-size:var(--fs-xl);margin-bottom:20px}
+.page-title:focus{outline:none}
+.lede{color:var(--muted);margin:0 0 24px;max-width:68ch}
+
+.empty{border:1.5px dashed var(--line-2);border-radius:var(--r-lg);padding:clamp(28px,5vw,52px) 20px;text-align:center;color:var(--muted);background:var(--surface)}
+.empty .em-ic{width:56px;height:56px;margin:0 auto 14px;border-radius:50%;display:grid;place-items:center;background:var(--surface-2);color:var(--gold)}
+.empty strong{display:block;color:var(--ink);font-size:var(--fs-md);margin-bottom:4px}
+.stack{display:grid;gap:16px}
+.label-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:20px 22px;box-shadow:var(--shadow-1)}
+.label-card h3{font-size:var(--fs-md);color:var(--green-2);margin-bottom:6px}
+:root[data-theme="dark"] .label-card h3{color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .label-card h3{color:var(--gold)}}
+.label-card p{color:var(--ink-2);white-space:pre-line}
+.label-card .muted{color:var(--muted)}
+.link-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+
+/* ================= Reading pages ================= */
+.prose{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-1);
+  padding:clamp(24px,4.5vw,52px) clamp(20px,5vw,60px);position:relative;max-width:900px}
+.prose::before{content:"";position:absolute;top:0;inset-inline-start:clamp(20px,5vw,60px);width:72px;height:3px;background:var(--gold-line);border-radius:0 0 3px 3px}
+.prose p{font-size:clamp(1.1rem,1rem + .35vw,1.28rem);line-height:2.15;color:var(--ink);font-weight:400;max-width:68ch}
+.prose p+p{margin-top:1.1em}
+.vm-title{margin-bottom:22px}
+.vm{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.vm-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-1);
+  padding:clamp(22px,3.5vw,36px);display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
+.vm-card::before{content:"";position:absolute;top:0;inset-inline:0;height:4px;background:linear-gradient(to left,var(--green-2),var(--gold-line))}
+.vm-head{display:flex;align-items:center;gap:12px}
+.vm-ic{flex:none;width:48px;height:48px;border-radius:14px;background:var(--green);color:#D8BC7C;display:grid;place-items:center}
+.vm-head h3{font-size:var(--fs-lg);color:var(--ink)}
+.vm-card p{font-size:clamp(1.08rem,1rem + .3vw,1.22rem);line-height:2.05;color:var(--ink-2)}
+.values-head{display:flex;align-items:center;gap:12px;margin:clamp(32px,5vw,48px) 0 18px}
+.values-head h3{font-size:var(--fs-lg)}
+.values-head::after{content:"";flex:1;height:1px;background:var(--line)}
+.values{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.value{grid-column:span 2}
+.value:nth-child(4),.value:nth-child(5){grid-column:span 3}
+@media (max-width:1100px){.values{grid-template-columns:repeat(2,minmax(0,1fr))}.value,.value:nth-child(4){grid-column:span 1}.value:nth-child(5){grid-column:1 / -1}}
+@media (max-width:640px){.values{grid-template-columns:minmax(0,1fr)}.value:nth-child(5){grid-column:auto}}
+.value{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:22px 22px 20px;box-shadow:var(--shadow-1);
+  display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"n h" "p p";gap:12px 14px;align-items:center;align-content:start;transition:border-color .25s,box-shadow .25s,transform .25s}
+.value:hover{border-color:var(--gold-line);box-shadow:var(--shadow-2);transform:translateY(-3px)}
+.value-n{grid-area:n;width:44px;height:44px;border-radius:50%;border:2px solid var(--gold-line);color:var(--gold);display:grid;place-items:center;font-weight:700;font-size:1.05rem}
+.value h4{grid-area:h;margin:0;font-size:var(--fs-md);line-height:1.6;color:var(--green-2)}
+:root[data-theme="dark"] .value h4{color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .value h4{color:var(--gold)}}
+.value p{grid-area:p;font-size:1.06rem;line-height:1.95;color:var(--ink-2)}
+@media (max-width:760px){.vm{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.value-n{width:38px;height:38px}}
+
+
+/* ================= Report page ================= */
+:root{--lv-t:#12804A;--lv-q:#3A5FB0;--lv-n:#E58B3A;--lv-n-ink:#3B2208;--lv-h:#B8322A}
+.rp-hero{background:linear-gradient(135deg,#0E3B2C 0%,#185040 70%,#22604B 100%);color:#F7F3E8;border-radius:var(--r-lg);padding:clamp(22px,4vw,40px);position:relative;overflow:hidden;box-shadow:var(--shadow-2)}
+.rp-hero::after{content:"";position:absolute;inset:0;opacity:.12;pointer-events:none;
+  background-image:linear-gradient(45deg,#D8BC7C 1px,transparent 1px),linear-gradient(-45deg,#D8BC7C 1px,transparent 1px);background-size:26px 26px;
+  mask-image:linear-gradient(to right,#000,transparent 60%);-webkit-mask-image:linear-gradient(to right,#000,transparent 60%)}
+.rp-hero>*{position:relative;z-index:1}
+.rp-issuer{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:var(--fs-sm);color:#C9D5CD}
+.rp-tag{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(216,188,124,.6);color:#E7D3A0;border-radius:999px;padding:2px 12px;font-size:var(--fs-xs);font-weight:600}
+.rp-hero h2{font-size:var(--fs-xl);margin:10px 0 4px;color:#fff}
+.rp-hero .rp-school{font-size:var(--fs-md);color:#E9E2CF}
+.rp-update{margin-top:18px;padding-top:16px;border-top:1px solid rgba(240,235,221,.18);font-size:var(--fs-sm);color:#D9E2DB;display:grid;gap:4px}
+.rp-update ul{margin:0;padding-inline-start:20px}
+.rp-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:14px;font-size:var(--fs-sm);color:#C9D5CD}
+.rp-meta b{color:#fff;font-weight:600}
+
+.rp-nav{position:sticky;top:0;z-index:5;display:flex;gap:8px;overflow-x:auto;padding:12px 2px;margin:14px 0 0;background:var(--bg);scrollbar-width:none}
+.rp-nav::-webkit-scrollbar{display:none}
+.rp-nav button{flex:none;min-height:42px;padding:8px 16px;border-radius:999px;border:1px solid var(--line-2);background:var(--surface);cursor:pointer;font-size:var(--fs-sm);font-weight:600;color:var(--ink-2)}
+.rp-nav button:hover{border-color:var(--gold-line)}
+.rp-sec{margin-top:clamp(36px,5vw,56px);scroll-margin-top:calc(env(safe-area-inset-top,0px) + 80px)}
+.rp-sec>h3{font-size:var(--fs-lg);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.rp-sec>h3::before{content:"";width:6px;height:26px;border-radius:3px;background:linear-gradient(var(--green-2),var(--gold-line))}
+.notice{display:flex;gap:12px;align-items:flex-start;background:var(--gold-soft);color:var(--ink);border:1px solid var(--gold-line);border-radius:var(--r-md);padding:14px 18px;margin:0 0 18px;line-height:1.9;font-size:var(--fs-base)}
+.notice svg{flex:none;margin-top:5px;color:var(--gold)}
+.rp-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-1);padding:clamp(18px,3vw,30px)}
+
+.lv{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:2px 12px;font-size:var(--fs-xs);font-weight:700;line-height:1.8;white-space:nowrap;color:#fff}
+.lv-التميز{background:var(--lv-t)} .lv-التقدم{background:var(--lv-q)} .lv-الانطلاق{background:var(--lv-n);color:var(--lv-n-ink)} .lv-التهيئة{background:var(--lv-h)}
+.c-التميز{--c:var(--lv-t)} .c-التقدم{--c:var(--lv-q)} .c-الانطلاق{--c:var(--lv-n)} .c-التهيئة{--c:var(--lv-h)}
+
+.ov{display:grid;grid-template-columns:minmax(240px,320px) minmax(0,1fr);gap:clamp(20px,4vw,48px);align-items:center}
+.gauge{display:grid;justify-items:center;gap:8px;text-align:center}
+.gauge svg{width:100%;max-width:280px;height:auto}
+.gauge .g-label{font-size:var(--fs-sm);color:var(--muted);max-width:26ch}
+.bars{display:grid;gap:16px}
+.bar-row{display:grid;grid-template-columns:minmax(110px,170px) minmax(0,1fr) auto;gap:14px;align-items:center}
+.bar-row .bn{font-weight:600;font-size:var(--fs-sm);line-height:1.6}
+.bar-track{height:14px;border-radius:999px;background:var(--surface-2);overflow:hidden;position:relative}
+.bar-fill{position:absolute;inset-block:0;right:0;width:var(--w);background:var(--c);border-radius:999px;transform-origin:right;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.bar-row .bv{font-weight:700;font-size:var(--fs-sm);min-width:4.5em;text-align:end;font-variant-numeric:tabular-nums}
+.years{display:flex;gap:14px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;align-items:end}
+.years .yl{font-size:var(--fs-sm);color:var(--muted);margin-inline-end:auto;max-width:48ch}
+.yr{display:grid;justify-items:center;gap:4px;font-size:var(--fs-xs);color:var(--muted)}
+.yr i{display:block;width:34px;height:calc(var(--h) * .7px);background:var(--lv-n);border-radius:6px 6px 0 0}
+.yr b{color:var(--ink);font-size:var(--fs-sm)}
+
+.legend{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px}
+.lg{border:1px solid var(--line);border-top:4px solid var(--c);border-radius:var(--r-md);padding:14px 16px;background:var(--surface);font-size:var(--fs-sm);color:var(--ink-2);line-height:1.8}
+.lg b{display:block;color:var(--ink);font-size:var(--fs-base);margin-bottom:2px}
+
+.info{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden}
+.info div{background:var(--surface);padding:12px 16px;display:grid;gap:2px}
+.info dt{font-size:var(--fs-xs);color:var(--muted)}
+.info dd{margin:0;font-weight:600;font-size:var(--fs-sm);overflow-wrap:anywhere}
+.info .wide{grid-column:span 2}
+.note{font-size:var(--fs-sm);color:var(--muted);margin-top:10px}
+
+.summary-lead{font-size:clamp(1.06rem,1rem + .3vw,1.2rem);line-height:2.05;color:var(--ink);border-inline-start:4px solid var(--gold-line);padding-inline-start:18px}
+.sw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
+.sw-box{border:1px solid var(--line);border-radius:var(--r-md);background:var(--surface);overflow:hidden}
+.sw-box h4{margin:0;padding:14px 18px;font-size:var(--fs-base);display:flex;gap:10px;align-items:center;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.sw-box h4 .dot{width:12px;height:12px;border-radius:50%;background:var(--c)}
+.sw-box p.in{margin:0;padding:12px 18px 0;font-size:var(--fs-sm);color:var(--muted)}
+.sw-box ul{list-style:none;margin:0;padding:8px 10px 12px}
+.sw-box li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;padding:10px 8px;border-bottom:1px dashed var(--line);font-size:var(--fs-sm);line-height:1.85;align-items:start}
+.sw-box li:last-child{border-bottom:0}
+.code{direction:ltr;unicode-bidi:isolate;display:inline-block;font-family:"IBM Plex Sans Arabic",ui-monospace,monospace;font-size:var(--fs-xs);font-weight:700;color:var(--ink-2);background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:1px 8px;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;border-bottom:1px solid var(--line);margin-bottom:20px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;min-height:48px;padding:10px 18px;border:0;border-bottom:3px solid transparent;background:transparent;cursor:pointer;font-weight:600;font-size:var(--fs-sm);color:var(--muted);display:flex;gap:8px;align-items:center}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--gold-line)}
+.tab .tp{font-size:var(--fs-xs);color:var(--muted);font-weight:500}
+.dom-desc{color:var(--ink-2);line-height:2;margin-bottom:18px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 14px}
+.chip{min-height:40px;padding:6px 14px;border-radius:999px;border:1px solid var(--line-2);background:var(--surface);cursor:pointer;font-size:var(--fs-sm);font-weight:600;color:var(--ink-2);display:inline-flex;gap:8px;align-items:center}
+.chip .cd{width:10px;height:10px;border-radius:50%;background:var(--c,var(--muted))}
+.chip[aria-pressed="true"]{background:var(--green-2);color:#fff;border-color:var(--green-2)}
+:root[data-theme="dark"] .chip[aria-pressed="true"]{background:var(--gold);color:#10211A;border-color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip[aria-pressed="true"]{background:var(--gold);color:#10211A;border-color:var(--gold)}}
+.std-block{margin-top:22px}
+.std-block[hidden]{display:none}
+.std-block>h4{margin:0 0 12px;font-size:var(--fs-md);display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.std-block>h4 .sp{font-size:var(--fs-sm);font-weight:700;color:var(--ink-2)}
+.rind{background:var(--surface);border:1px solid var(--line);border-inline-start:5px solid var(--c);border-radius:var(--r-md);padding:16px 18px;margin-bottom:10px;box-shadow:var(--shadow-1)}
+.rind[hidden]{display:none}
+.rind-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 18px;align-items:start}
+.rind-text{font-size:clamp(1.04rem,1rem + .2vw,1.14rem);font-weight:500;line-height:1.9;margin-top:6px;overflow-wrap:anywhere}
+.rind-score{display:grid;justify-items:center;gap:4px;min-width:96px}
+.rind-score b{font-size:1.5rem;line-height:1.2;color:var(--ink);font-variant-numeric:tabular-nums}
+.rind-bar{grid-column:1 / -1;height:6px;border-radius:999px;background:var(--surface-2);overflow:hidden;position:relative}
+.rind-bar i{position:absolute;inset-block:0;right:0;width:var(--w);background:var(--c);border-radius:999px}
+.rind details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+.rind summary{cursor:pointer;font-weight:600;font-size:var(--fs-sm);color:var(--green-2);list-style:none;display:inline-flex;gap:8px;align-items:center;min-height:36px}
+:root[data-theme="dark"] .rind summary{color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rind summary{color:var(--gold)}}
+.rind summary::-webkit-details-marker{display:none}
+.rind summary svg{transition:transform .2s}
+.rind details[open] summary svg{transform:rotate(180deg)}
+.rind .finding{font-size:var(--fs-sm);color:var(--muted);margin-top:6px}
+.rind .rec{font-size:var(--fs-base);line-height:2;color:var(--ink-2);margin-top:4px}
+
+.sh{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.sh .rp-card h4{margin:0 0 16px;font-size:var(--fs-base)}
+.sh .bar-row{grid-template-columns:minmax(96px,120px) minmax(0,1fr) auto;gap:10px}
+.src{margin-top:28px;font-size:var(--fs-sm);color:var(--muted);display:grid;gap:4px}
+.source-card{margin-top:clamp(40px,6vw,64px);border:1px solid var(--line);border-top:4px solid var(--gold-line);border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow-1);
+  padding:clamp(18px,3vw,28px);display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px 20px;align-items:center}
+.source-card .si{width:56px;height:56px;border-radius:16px;background:var(--green);color:#D8BC7C;display:grid;place-items:center}
+.source-card h3{font-size:var(--fs-sm);color:var(--muted);font-weight:600;margin:0 0 2px}
+.source-card .st{font-size:var(--fs-md);font-weight:700;line-height:1.6;color:var(--ink)}
+.source-card .sm{font-size:var(--fs-sm);color:var(--ink-2);margin-top:2px}
+.source-card .sf{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:6px;font-size:var(--fs-xs);color:var(--muted)}
+.source-card .notes{grid-column:1 / -1;border-top:1px dashed var(--line);padding-top:12px;font-size:var(--fs-sm);color:var(--muted);display:grid;gap:4px}
+@media (max-width:640px){.source-card{grid-template-columns:auto minmax(0,1fr)}.source-card .btn{grid-column:1 / -1;width:100%}}
+
+@media (max-width:1100px){.sh{grid-template-columns:minmax(0,1fr)}.legend{grid-template-columns:repeat(2,minmax(0,1fr))}.info{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:820px){.ov{grid-template-columns:minmax(0,1fr)}.sw{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:980px){.rp-nav{top:calc(env(safe-area-inset-top,0px) + 62px)}}
+@media (max-width:560px){
+  .bar-row{grid-template-columns:minmax(0,1fr) auto;gap:6px 10px}
+  .bar-row .bar-track{grid-column:1 / -1;grid-row:2}
+  .legend{grid-template-columns:minmax(0,1fr)}
+  .info{grid-template-columns:minmax(0,1fr)}.info .wide{grid-column:auto}
+  .rind-top{grid-template-columns:minmax(0,1fr)}
+  .rind-score{grid-row:1;justify-items:start;grid-auto-flow:column;align-items:center;gap:10px;min-width:0}
+  .rind{padding:14px}
+}
+@media (prefers-reduced-motion:reduce){.bar-fill{animation:none}}
+
+
+/* ================= Improvement plan ================= */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:14px 16px;box-shadow:var(--shadow-1)}
+.kpi b{display:block;font-size:1.7rem;line-height:1.3;color:var(--green-2);font-variant-numeric:tabular-nums}
+:root[data-theme="dark"] .kpi b{color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .kpi b{color:var(--gold)}}
+.kpi span{font-size:var(--fs-sm);color:var(--muted)}
+.pl-tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:4px 0 6px}
+.pl-tools .search{flex:1 1 280px}
+.pind{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-1);padding:clamp(16px,2.6vw,24px);margin-bottom:14px}
+.pind[hidden]{display:none}
+.pind-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 20px;align-items:start}
+.pind-text{font-size:clamp(1.06rem,1rem + .25vw,1.18rem);font-weight:600;line-height:1.85;margin-top:6px;overflow-wrap:anywhere}
+.shift{display:flex;align-items:center;gap:10px;flex:none}
+.shift .st{display:grid;justify-items:center;gap:2px;min-width:80px}
+.shift .st small{font-size:var(--fs-xs);color:var(--muted)}
+.shift .st b{font-size:1.25rem;font-variant-numeric:tabular-nums;line-height:1.3}
+.shift .arr{color:var(--gold);display:flex}
+.gapbar{position:relative;height:10px;border-radius:999px;background:var(--surface-2);margin:16px 0 4px}
+.gapbar .cur{position:absolute;inset-block:0;right:0;width:var(--c-w);background:var(--cc);border-radius:999px}
+.gapbar .tgt{position:absolute;top:-5px;bottom:-5px;right:calc(var(--t-w) - 1.5px);width:3px;border-radius:2px;background:var(--ink)}
+.gapbar .zone{position:absolute;inset-block:0;right:var(--c-w);width:calc(var(--t-w) - var(--c-w));background:repeating-linear-gradient(45deg,transparent 0 5px,color-mix(in srgb,var(--tc) 35%,transparent) 5px 10px);border-radius:999px}
+.gaplegend{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:var(--fs-xs);color:var(--muted)}
+.objective{margin-top:16px;padding:12px 16px;border-radius:var(--r-md);background:var(--surface-3);display:flex;gap:12px;align-items:flex-start;line-height:1.85}
+.objective svg{flex:none;margin-top:4px;color:var(--green-2)}
+:root[data-theme="dark"] .objective svg{color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .objective svg{color:var(--gold)}}
+.objective b{display:block;font-size:var(--fs-xs);color:var(--muted);font-weight:600}
+.objective span{font-weight:600}
+.pl-body{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:18px 24px;margin-top:16px}
+.pl-body h5{margin:0 0 8px;font-size:var(--fs-sm);color:var(--muted);font-weight:600}
+.acts{list-style:none;margin:0;padding:0;counter-reset:a;display:grid;gap:8px}
+.acts li{counter-increment:a;display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start;line-height:1.85;font-size:var(--fs-base)}
+.acts li::before{content:counter(a,arabic-indic);width:28px;height:28px;border-radius:8px;background:var(--surface-2);color:var(--gold);font-weight:700;display:grid;place-items:center;font-size:var(--fs-sm);margin-top:2px}
+.meta{display:grid;gap:12px;align-content:start;border-inline-start:1px solid var(--line);padding-inline-start:20px}
+.meta dl{margin:0;display:grid;gap:12px}
+.meta dt{font-size:var(--fs-xs);color:var(--muted);font-weight:600;margin-bottom:4px}
+.meta dd{margin:0;font-size:var(--fs-sm);line-height:1.85;color:var(--ink-2)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{padding:2px 10px;border-radius:999px;border:1px solid var(--line-2);font-size:var(--fs-xs);font-weight:600;line-height:1.9;color:var(--ink-2);background:var(--surface)}
+.period{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.period svg{color:var(--gold)}
+@media (max-width:1100px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.pl-body{grid-template-columns:minmax(0,1fr)}.meta{border-inline-start:0;padding-inline-start:0;border-top:1px dashed var(--line);padding-top:14px}}
+@media (max-width:560px){.pind-head{grid-template-columns:minmax(0,1fr)}.shift{justify-content:flex-start}.shift .st{min-width:0;justify-items:start}}
+
+
+/* ================= Self-evaluation plan ================= */
+.an-table{width:100%;border-collapse:separate;border-spacing:0;font-size:var(--fs-sm)}
+.an-table th{text-align:start;font-weight:600;color:var(--muted);font-size:var(--fs-xs);padding:10px 14px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.an-table td{padding:14px;border-bottom:1px solid var(--line);vertical-align:middle;line-height:1.8}
+.an-table tr:last-child td{border-bottom:0}
+.an-table td.n{font-weight:700;color:var(--ink)}
+.an-table td.p{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.an-table tr.hl td{background:color-mix(in srgb,var(--lv-n) 10%,transparent)}
+.prio{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.prio div{display:flex;gap:14px;align-items:flex-start;border-radius:var(--r-md);padding:16px 18px;background:var(--green);color:#F7F3E8;line-height:1.85}
+.prio b{flex:none;width:34px;height:34px;border-radius:50%;background:#D8BC7C;color:#10211A;display:grid;place-items:center;font-size:var(--fs-sm)}
+.prio small{display:block;color:#D8BC7C;font-weight:700;font-size:var(--fs-xs)}
+.mi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-1);overflow:hidden;margin-bottom:18px}
+.mi-head{padding:clamp(16px,2.6vw,24px);border-bottom:1px solid var(--line)}
+.mi-path{font-size:var(--fs-xs);color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px;margin-bottom:8px}
+.mi-path b{color:var(--ink-2);font-weight:600}
+.mi-body{padding:clamp(16px,2.6vw,24px);display:grid;gap:18px}
+.need{background:var(--gold-soft);border-inline-start:4px solid var(--gold-line);border-radius:var(--r-sm);padding:12px 16px;line-height:1.95}
+.need small{display:block;font-weight:700;color:var(--gold);font-size:var(--fs-xs)}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px}
+.chk{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.chk li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;line-height:1.85}
+.chk li::before{content:"";width:18px;height:18px;margin-top:6px;border-radius:6px;background:var(--surface-3);box-shadow:inset 0 0 0 2px var(--green-2)}
+.chk.mech li::before{border-radius:50%;box-shadow:inset 0 0 0 2px var(--gold-line);background:var(--gold-soft)}
+.mi-foot{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;padding:14px clamp(16px,2.6vw,24px);background:var(--surface-2);font-size:var(--fs-sm)}
+.mi-foot dt{font-size:var(--fs-xs);color:var(--muted);font-weight:600}
+.mi-foot dd{margin:0}
+.sus{display:grid;gap:12px}
+.sus-row{display:grid;grid-template-columns:minmax(0,1.3fr) 150px minmax(0,1.3fr) minmax(0,.8fr);gap:12px 18px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:14px 18px}
+.sus-row .t{font-weight:600;line-height:1.8}
+.sus-meter{display:grid;gap:4px;font-size:var(--fs-xs);color:var(--muted)}
+.sus-meter b{font-size:1.1rem;color:var(--ink);font-variant-numeric:tabular-nums}
+.sus-bar{position:relative;height:8px;border-radius:999px;background:var(--surface-2)}
+.sus-bar i{position:absolute;inset-block:0;right:0;width:calc((var(--v) - 90) * 10%);background:var(--lv-t);border-radius:999px}
+.sus-bar u{position:absolute;top:-4px;bottom:-4px;width:3px;right:calc((var(--g) - 90) * 10% - 1.5px);background:var(--ink);border-radius:2px;text-decoration:none}
+.sus-row .a{font-size:var(--fs-sm);line-height:1.85;color:var(--ink-2)}
+.tl{width:100%;border-collapse:separate;border-spacing:0}
+.tl th{background:var(--green);color:#F7F3E8;padding:12px 16px;text-align:start;font-size:var(--fs-sm)}
+.tl th:first-child{border-start-start-radius:var(--r-md)} .tl th:last-child{border-start-end-radius:var(--r-md)}
+.tl td{padding:14px 16px;border-bottom:1px solid var(--line);background:var(--surface);vertical-align:top;line-height:1.85;font-size:var(--fs-sm)}
+.tl td.l{font-weight:700;color:var(--ink)}
+.tgt{display:inline-block;margin-top:6px;padding:2px 10px;border-radius:999px;background:var(--surface-3);color:var(--green-2);font-weight:700;font-size:var(--fs-xs)}
+:root[data-theme="dark"] .tgt{color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tgt{color:var(--gold)}}
+.code-inline{font-variant-numeric:tabular-nums;white-space:nowrap}
+.final-note{margin-top:18px;font-size:var(--fs-sm);color:var(--muted)}
+@media (max-width:980px){.sus-row{grid-template-columns:minmax(0,1fr) 150px}.sus-row .a{grid-column:1 / -1}}
+@media (max-width:760px){
+  .two,.prio{grid-template-columns:minmax(0,1fr)}
+  .an-table thead{display:none}.an-table,.an-table tbody,.an-table tr,.an-table td{display:block;width:100%}
+  .an-table tr{border-bottom:1px solid var(--line);padding:10px 0}.an-table td{border:0;padding:4px 14px}
+  .an-table td.p,.an-table td.l{display:inline-block;width:auto}
+  .tl thead{display:none}.tl,.tl tbody,.tl tr,.tl td{display:block;width:100%}
+  .tl tr{border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;margin-bottom:10px}
+  .tl td.l{background:var(--green);color:#F7F3E8}.tl td[data-y]::before{content:attr(data-y);display:block;font-size:var(--fs-xs);color:var(--muted);font-weight:700}
+  .sus-row{grid-template-columns:minmax(0,1fr)}
+}
+
+
+/* ================= Tests results ================= */
+.yr-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.yr-card{display:grid;gap:12px;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow-1);transition:border-color .2s,box-shadow .2s,transform .2s}
+.yr-card:hover{border-color:var(--gold-line);box-shadow:var(--shadow-2);transform:translateY(-3px)}
+.yr-card h3{font-size:var(--fs-lg)}
+.yr-card .mini{display:flex;flex-wrap:wrap;gap:8px}
+.ts-sum{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+.ts-s{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;box-shadow:var(--shadow-1);display:grid;gap:4px;border-top:4px solid var(--c)}
+.ts-s .k{font-size:var(--fs-sm);color:var(--muted);font-weight:600}
+.ts-s b{font-size:2rem;line-height:1.25;font-variant-numeric:tabular-nums;color:var(--ink)}
+.ts-s small{font-size:var(--fs-xs);color:var(--muted)}
+.c-tahsili{--c:var(--green-2);--on-c:#fff} .c-qudrat{--c:var(--gold-line);--on-c:#10211A}
+.ts-badge{background:var(--c);color:var(--on-c)}
+.ts{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-1);margin-top:18px;overflow:hidden}
+.ts-h{display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between;align-items:center;padding:18px clamp(16px,2.6vw,24px);border-bottom:1px solid var(--line)}
+.ts-h h4{margin:0;font-size:var(--fs-lg);display:flex;align-items:center;gap:10px}
+.ts-h h4::before{content:"";width:10px;height:28px;border-radius:4px;background:var(--c)}
+.ts-b{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr) minmax(0,1fr);gap:0}
+.ts-b>div{padding:18px clamp(16px,2.4vw,22px);border-inline-start:1px solid var(--line)}
+.ts-b>div:first-child{border-inline-start:0}
+.ts-b h5{margin:0 0 12px;font-size:var(--fs-sm);color:var(--muted);font-weight:600}
+.cmp{display:grid;gap:10px}
+.cmp-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;align-items:center;font-size:var(--fs-sm)}
+.cmp-row b{font-variant-numeric:tabular-nums;font-size:1.05rem}
+.cmp-row .bar-track{grid-column:1 / -1;height:10px}
+.cmp-row .bar-fill{background:var(--c)}
+.cmp-row.adm .bar-fill{background:var(--muted)}
+.diff{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:var(--fs-xs);font-weight:700;padding:3px 10px;border-radius:999px;background:var(--surface-2);color:var(--ink-2)}
+.pr{display:grid;gap:14px}
+.pr-row{display:grid;gap:6px;font-size:var(--fs-sm)}
+.pr-row .top{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.pr-row .top b{font-variant-numeric:tabular-nums}
+.pr-row small{color:var(--muted);font-size:var(--fs-xs)}
+.pr-track{position:relative;height:12px;border-radius:999px;background:var(--surface-2);overflow:hidden}
+.pr-track i{position:absolute;inset-block:0;right:0;width:var(--w);background:var(--pc);border-radius:999px}
+.hist svg{width:100%;height:auto;display:block}
+.pr-note{font-size:var(--fs-xs);color:var(--muted);margin-top:12px}
+@media (max-width:1100px){.ts-b{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.ts-b>div:last-child{grid-column:1 / -1;border-inline-start:0;border-top:1px solid var(--line)}}
+@media (max-width:760px){.ts-sum,.yr-cards{grid-template-columns:minmax(0,1fr)}.ts-b{grid-template-columns:minmax(0,1fr)}.ts-b>div{border-inline-start:0;border-top:1px solid var(--line)}.ts-b>div:first-child{border-top:0}}
+
+.ts-sum4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.ts-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.ts-stats>div{padding:14px clamp(16px,2.4vw,22px);display:grid;gap:2px;border-inline-start:1px solid var(--line)}
+.ts-stats>div:first-child{border-inline-start:0}
+.ts-stats span{font-size:var(--fs-xs);color:var(--muted);font-weight:600}
+.ts-stats b{font-size:1.5rem;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:4px}
+.ts-stats b.up{color:var(--lv-t)} .ts-stats b.na{font-size:var(--fs-sm);color:var(--muted);font-weight:500}
+.ts-b2{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+.d-hi{background:#2F7D57;color:#fff} .d-md{background:#8FDDB8;color:#0F2F22} .d-lo{background:#DD7A24;color:#2A1505} .d-vl{background:#C8413A;color:#fff}
+.dist{display:flex;height:34px;border-radius:8px;overflow:hidden;gap:2px}
+.dist span{display:grid;place-items:center;font-size:var(--fs-xs);font-weight:700;min-width:0;white-space:nowrap;overflow:hidden}
+.dist-list{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 16px}
+.dist-list li{display:flex;align-items:center;gap:8px;font-size:var(--fs-sm)}
+.dist-list li b{margin-inline-start:auto;font-variant-numeric:tabular-nums}
+.dist-list i,.dist-legend i{width:12px;height:12px;border-radius:3px;flex:none;display:inline-block}
+.dist-legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:var(--fs-sm);color:var(--ink-2)}
+.dist-legend span{display:flex;align-items:center;gap:8px}
+@media (max-width:1100px){.ts-sum4{grid-template-columns:repeat(2,minmax(0,1fr))}.ts-b2{grid-template-columns:minmax(0,1fr)}.ts-b2>div:last-child{border-top:1px solid var(--line)}}
+@media (max-width:560px){.ts-sum4{grid-template-columns:minmax(0,1fr)}.ts-stats{grid-template-columns:minmax(0,1fr)}.ts-stats>div{border-inline-start:0;border-top:1px solid var(--line)}.ts-stats>div:first-child{border-top:0}.dist-list{grid-template-columns:minmax(0,1fr)}}
+
+/* ================= Achievements ================= */
+.ach-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+.ach-kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;box-shadow:var(--shadow-1);display:grid;gap:2px}
+.ach-kpi b{font-size:2.1rem;line-height:1.25;color:var(--green-2);font-variant-numeric:tabular-nums}
+:root[data-theme="dark"] .ach-kpi b{color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ach-kpi b{color:var(--gold)}}
+.ach-kpi span{font-size:var(--fs-sm);color:var(--muted);line-height:1.6}
+.feat{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px}
+.feat-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-1);display:flex;flex-direction:column}
+.feat-card button{border:0;padding:0;background:var(--surface-2);cursor:zoom-in;display:block}
+.feat-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.feat-card .fb{padding:16px 18px;display:grid;gap:8px}
+.feat-card .fb p{font-weight:600;line-height:1.85;font-size:var(--fs-base)}
+.lvb{display:inline-flex;align-items:center;gap:6px;justify-self:start;font-size:var(--fs-xs);font-weight:700;padding:3px 12px;border-radius:999px;line-height:1.7}
+.lvb-دولي{background:#3F2A78;color:#fff} .lvb-المملكة{background:#0E5D3E;color:#fff} .lvb-تأهل{background:#D9EFE4;color:#0E3B2C} .lvb-مكة{background:var(--surface-2);color:var(--ink-2)}
+.pyr{display:grid;gap:10px;justify-items:center}
+.pyr button{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;padding:14px 20px;border-radius:14px;min-height:64px;width:var(--w);max-width:100%;transition:transform .2s,box-shadow .2s}
+.pyr button:hover,.pyr button:focus-visible{transform:translateY(-2px);box-shadow:var(--shadow-2)}
+.pyr button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.pyr b{font-size:1.9rem;line-height:1;font-variant-numeric:tabular-nums}
+.pyr .pl{font-weight:700;font-size:var(--fs-md)}
+.pyr .pn{font-size:var(--fs-sm);opacity:.85;text-align:end}
+.pyr button.py-دولي{background:#3F2A78;color:#fff} .pyr button.py-المملكة{background:#0E5D3E;color:#fff} .pyr button.py-تأهل{background:#2C7A5C;color:#fff} .pyr button.py-مكة{background:#D9EFE4;color:#0E3B2C}
+.qtable td.qa{color:var(--gold);width:40px}
+.flow{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:14px;align-items:stretch}
+.flow-col{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px;display:grid;gap:10px;align-content:start}
+.flow-col h4{margin:0;font-size:var(--fs-sm);color:var(--muted)}
+.flow-col li{list-style:none;display:flex;gap:10px;align-items:flex-start;line-height:1.8;font-size:var(--fs-sm)}
+.flow-col ul{margin:0;padding:0;display:grid;gap:10px}
+.flow-col li i{flex:none;width:10px;height:10px;border-radius:50%;margin-top:9px;background:var(--green-2)}
+.flow-arrow{display:grid;place-items:center;color:var(--gold)}
+.dist2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.donut{display:grid;grid-template-columns:200px minmax(0,1fr);gap:20px;align-items:center}
+.donut svg{width:100%;height:auto}
+.leg{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:var(--fs-sm)}
+.leg li{display:flex;align-items:center;gap:10px}
+.leg li i{width:12px;height:12px;border-radius:3px;flex:none}
+.leg li b{margin-inline-start:auto;font-variant-numeric:tabular-nums}
+.board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.medal{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px;display:grid;gap:10px;align-content:start;box-shadow:var(--shadow-1);position:relative;overflow:hidden}
+.medal::before{content:"";position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,#B8913F,#E9CF8A,#B8913F)}
+.medal .ic{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#F5E7C3;color:#8A6417}
+.medal h4{margin:0;font-size:var(--fs-base);line-height:1.6}
+.medal .gold{font-weight:700;color:#8A6417}
+.medal ul{margin:0;padding:0;list-style:none;display:grid;gap:4px;font-size:var(--fs-sm)}
+.imp{display:grid;gap:12px}
+.imp-row{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.4fr) auto;gap:12px 22px;align-items:center}
+.imp-row h4{margin:0;font-size:var(--fs-base)}
+.imp-row small{display:block;color:var(--muted);font-size:var(--fs-xs);line-height:1.7;margin-top:2px}
+.imp-bars{display:grid;gap:6px;font-size:var(--fs-xs);color:var(--muted)}
+.imp-bars div{display:grid;grid-template-columns:96px minmax(0,1fr) 64px;gap:8px;align-items:center}
+.imp-bars b{color:var(--ink);font-size:var(--fs-sm);font-variant-numeric:tabular-nums;text-align:end}
+.reg-tools{display:grid;gap:12px;margin-bottom:16px}
+.reg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ach{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-1)}
+.ach[hidden]{display:none}
+.ach button.th{border:0;padding:0;background:var(--surface-2);cursor:zoom-in;position:relative}
+.ach button.th img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.ach button.th span{position:absolute;bottom:8px;left:8px;background:rgba(0,0,0,.6);color:#fff;border-radius:8px;padding:2px 8px;font-size:var(--fs-xs);display:flex;gap:6px;align-items:center}
+.ach .ab{padding:14px 16px 16px;display:grid;gap:8px;flex:1;align-content:start}
+.ach .ab p{line-height:1.85;font-weight:600;font-size:var(--fs-sm)}
+.ach .meta-tags{display:flex;flex-wrap:wrap;gap:6px}
+.ach .ppl{font-size:var(--fs-xs);color:var(--muted);line-height:1.7}
+.video-card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px 24px;align-items:center;background:linear-gradient(135deg,#0E3B2C,#185040);color:#F7F3E8;border-radius:var(--r-lg);padding:clamp(18px,3vw,28px);box-shadow:var(--shadow-2)}
+.video-card .play{width:72px;height:72px;border-radius:50%;background:#D8BC7C;color:#10211A;display:grid;place-items:center}
+.video-card h3{margin:0 0 4px;font-size:var(--fs-lg);color:#fff}
+.video-card p{color:#C9D5CD;font-size:var(--fs-sm)}
+.video-card .btn{background:#F7F3E8;color:#0E3B2C}
+@media (max-width:1100px){.ach-kpis,.board{grid-template-columns:repeat(2,minmax(0,1fr))}.feat{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.feat-card:first-child{grid-column:1 / -1}.reg{grid-template-columns:repeat(2,minmax(0,1fr))}.dist2{grid-template-columns:minmax(0,1fr)}.imp-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.imp-row .btn{grid-column:1 / -1;justify-self:start}}
+@media (max-width:760px){.flow{grid-template-columns:minmax(0,1fr)}.flow-arrow{transform:rotate(-90deg)}.donut{grid-template-columns:150px minmax(0,1fr)}.video-card{grid-template-columns:auto minmax(0,1fr)}.video-card .btn{grid-column:1 / -1}}
+@media (max-width:560px){.ach-kpis,.board,.feat,.reg{grid-template-columns:minmax(0,1fr)}.imp-row{grid-template-columns:minmax(0,1fr)}.donut{grid-template-columns:minmax(0,1fr);justify-items:center}.donut svg{max-width:200px}.pyr button{grid-template-columns:auto minmax(0,1fr);width:100% !important}.pyr .pn{grid-column:1 / -1;text-align:start}}
+
+/* ================= Domain page ================= */
+.domain-head{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px 20px;align-items:center;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px clamp(18px,3vw,28px);box-shadow:var(--shadow-1);margin-bottom:22px}
+.domain-head .ic{width:60px;height:60px;border-radius:16px;background:var(--green);color:#D8BC7C;display:grid;place-items:center}
+.domain-head h2{font-size:var(--fs-xl)}
+.domain-head .desc{color:var(--muted);font-size:var(--fs-sm);margin-top:2px}
+.domain-head .facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:8px;font-size:var(--fs-sm);color:var(--ink-2)}
+.domain-head .facts b{color:var(--gold);font-weight:700}
+.domain-head .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:18px}
+.search{flex:1 1 300px;position:relative;min-width:0}
+.search input{width:100%;min-height:52px;border:1.5px solid var(--line-2);background:var(--surface);color:var(--ink);
+  border-radius:var(--r-md);padding:10px 48px 10px 44px;font:inherit;font-size:1rem}
+.search input::placeholder{color:var(--muted);opacity:1}
+.search input:focus{outline:none;border-color:var(--gold-line);box-shadow:0 0 0 3px var(--gold-soft)}
+.search .s-ic{position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;display:flex}
+.search .clear{position:absolute;left:6px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:8px;border:0;background:transparent;color:var(--muted);cursor:pointer;display:none;place-items:center}
+.search .clear.show{display:grid}
+.search-status{font-size:var(--fs-sm);color:var(--muted);min-height:1.6em;margin:-6px 0 12px}
+
+.stds{display:grid;gap:12px}
+.std{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow-1);overflow:hidden}
+.std[hidden]{display:none}
+.std.open{border-color:var(--line-2)}
+.std-head{display:flex;align-items:stretch;gap:0}
+.std-toggle{flex:1;min-width:0;display:flex;align-items:center;gap:14px;padding:16px 20px;min-height:68px;background:transparent;border:0;cursor:pointer;text-align:start}
+.std-toggle:hover{background:var(--surface-2)}
+.std-toggle:focus-visible{outline-offset:-3px}
+.std-num{flex:none;width:38px;height:38px;border-radius:50%;background:var(--green);color:#E2CA92;display:grid;place-items:center;font-weight:700;font-size:var(--fs-sm)}
+.std-titles{flex:1;min-width:0;display:grid}
+.std-name{font-weight:700;font-size:var(--fs-md);line-height:1.6;overflow-wrap:anywhere}
+.std-count{font-size:var(--fs-sm);color:var(--muted);line-height:1.6}
+.std-chev{flex:none;color:var(--muted);transition:transform .2s}
+.std.open .std-chev{transform:rotate(180deg)}
+.std-link{flex:none;display:flex;align-items:center;padding:12px 18px;border-inline-start:1px solid var(--line)}
+.std-panel{border-top:1px solid var(--line);background:var(--bg);padding:8px clamp(12px,2.5vw,20px) 18px}
+.std-panel[hidden]{display:none}
+
+.inds{list-style:none;margin:0;padding:10px 0 4px;display:grid;gap:12px;position:relative;counter-reset:none}
+.inds::before{content:"";position:absolute;top:30px;bottom:30px;right:21px;width:2px;border-radius:2px;
+  background:linear-gradient(to bottom,var(--gold-line),color-mix(in srgb,var(--gold-line) 25%,transparent))}
+.ind{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start;position:relative}
+.ind[hidden]{display:none}
+.ind-num{position:relative;z-index:1;width:44px;height:44px;border-radius:50%;background:var(--surface);border:2px solid var(--gold-line);
+  color:var(--gold);display:grid;place-items:center;font-weight:700;font-size:1.05rem;margin-top:10px;
+  box-shadow:0 0 0 5px var(--bg);transition:background-color .25s,color .25s}
+.ind-card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 22px;
+  display:flex;gap:18px;align-items:center;justify-content:space-between;min-width:0;
+  transition:border-color .25s,box-shadow .25s,transform .25s}
+.ind-card::before{content:"";position:absolute;top:22px;right:-7px;width:12px;height:12px;background:var(--surface);
+  border-right:1px solid var(--line);border-top:1px solid var(--line);transform:rotate(45deg);transition:border-color .25s}
+.ind:hover .ind-card{border-color:var(--gold-line);box-shadow:var(--shadow-2)}
+.ind:hover .ind-card::before{border-color:var(--gold-line)}
+.ind:hover .ind-num{background:var(--green-2);color:#fff;border-color:var(--green-2)}
+:root[data-theme="dark"] .ind:hover .ind-num{background:var(--gold);color:#10211A;border-color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ind:hover .ind-num{background:var(--gold);color:#10211A;border-color:var(--gold)}}
+.ind-body{min-width:0;flex:1}
+.ind-code{display:inline-block;font-weight:700;color:var(--gold);font-size:var(--fs-sm);margin-bottom:4px}
+.ind-text{color:var(--ink);font-size:clamp(1.08rem,1rem + .3vw,1.22rem);font-weight:500;line-height:1.95;overflow-wrap:anywhere;text-wrap:pretty}
+.ev-btn{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 16px;border-radius:999px;border:1px solid var(--line-2);
+  background:var(--surface-3);color:var(--green-2);text-decoration:none;font-size:var(--fs-sm);font-weight:600;white-space:nowrap;line-height:1.4;
+  transition:background-color .2s,color .2s,border-color .2s}
+.ev-btn:hover{background:var(--green-2);color:#fff;border-color:var(--green-2)}
+:root[data-theme="dark"] .ev-btn{color:var(--gold)}
+:root[data-theme="dark"] .ev-btn:hover{background:var(--gold);color:#10211A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ev-btn{color:var(--gold)}:root:not([data-theme="light"]) .ev-btn:hover{background:var(--gold);color:#10211A}}
+.ind-note{color:var(--muted);font-size:var(--fs-sm);padding:14px 4px}
+.pill{display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;font-size:var(--fs-xs);background:var(--gold-soft);color:var(--ink-2);line-height:1.7}
+
+.files{margin-top:14px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--surface)}
+.files h4{margin:0;font-size:var(--fs-sm);font-weight:700;padding:12px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.files h4 span{color:var(--muted);font-weight:500}
+.files ul{list-style:none;margin:0;padding:6px 8px}
+.files li[hidden]{display:none}
+.files a{display:flex;gap:10px;align-items:center;padding:10px 8px;border-radius:8px;text-decoration:none;font-size:var(--fs-sm);line-height:1.6;min-height:44px}
+.files a:hover{background:var(--surface-2)}
+.files a .t{flex:1;min-width:0;overflow-wrap:anywhere}
+.files a svg{flex:none;color:var(--muted)}
+
+.no-results{display:none}
+.no-results.show{display:block}
+.back-row{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.source-line{margin-top:28px;color:var(--muted);font-size:var(--fs-sm);display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.source-line a{color:var(--green-2);font-weight:600}
+:root[data-theme="dark"] .source-line a{color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .source-line a{color:var(--gold)}}
+
+.lock{max-width:620px;margin:20px auto 0}
+.lock .em-ic{width:72px;height:72px}
+
+/* ================= Lightbox ================= */
+dialog.lightbox{border:0;padding:0;max-width:none;max-height:none;width:100vw;height:100%;margin:0;background:rgba(4,18,13,.94);color:#fff}
+dialog.lightbox::backdrop{background:rgba(4,18,13,.94)}
+.lb-bar{position:fixed;top:0;inset-inline:0;display:flex;justify-content:space-between;align-items:center;gap:10px;
+  padding:calc(env(safe-area-inset-top,0px) + 12px) 16px 12px;background:linear-gradient(rgba(4,18,13,.95),rgba(4,18,13,0));z-index:2}
+.lb-bar h2{font-size:var(--fs-sm);font-weight:600;min-width:0}
+.lb-btns{display:flex;gap:8px;flex:none}
+.lb-btn{min-width:46px;min-height:46px;border-radius:10px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:grid;place-items:center;padding:0 14px}
+.lb-btn:focus-visible{outline-color:#E3C887}
+.lb-stage{position:absolute;inset:0;overflow:auto;display:grid;place-items:center;padding:calc(env(safe-area-inset-top,0px) + 80px) 16px calc(env(safe-area-inset-bottom,0px) + 24px)}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;background:#fff;border-radius:8px;padding:12px;cursor:zoom-in}
+.lb-stage.zoomed{place-items:start center}
+.lb-stage.zoomed img{max-width:none;max-height:none;width:min(1500px,240vw);cursor:zoom-out}
+
+/* ================= Responsive ================= */
+@media (max-width:980px){
+  .shell{grid-template-columns:minmax(0,1fr)}
+  .topbar{display:flex;position:sticky;top:0;z-index:30;align-items:center;gap:12px;
+    background:var(--green);color:var(--on-green);padding:calc(env(safe-area-inset-top,0px) + 8px) 12px 8px}
+  .topbar .t{font-weight:600;font-size:var(--fs-sm);line-height:1.5;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .icon-btn{flex:none;width:46px;height:46px;border-radius:10px;border:1px solid rgba(240,235,221,.3);background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer}
+  .sidebar{position:fixed;top:0;bottom:0;right:0;width:min(86vw,330px);height:100%;z-index:50;transform:translateX(105%);
+    transition:transform .25s ease,visibility 0s linear .25s;visibility:hidden;box-shadow:-20px 0 40px rgba(0,0,0,.25);
+    padding-top:calc(env(safe-area-inset-top,0px) + 20px);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 18px)}
+  .sidebar.open{transform:none;visibility:visible;transition:transform .25s ease}
+  .scrim{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:40;opacity:0;pointer-events:none;transition:opacity .2s}
+  .scrim.show{opacity:1;pointer-events:auto}
+  .side-close{display:grid;position:absolute;top:calc(env(safe-area-inset-top,0px) + 14px);left:12px}
+  .brand{padding-inline-end:56px}
+  .masthead{padding-top:22px}
+  .masthead.compact{display:none}
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .hero-text p{max-width:none}
+  .domain-head{grid-template-columns:auto minmax(0,1fr)}
+  .domain-head .actions{grid-column:1 / -1;justify-content:flex-start}
+}
+@media (max-width:640px){
+  body{font-size:1rem}
+  .content{padding-top:22px}
+  .domains{grid-template-columns:minmax(0,1fr);gap:14px}
+  .domain-card{--band:100px}
+  .dc-num{font-size:5.2rem}
+  .hero-actions .btn{flex:1 1 100%}
+  .photo-frame{padding:7px}
+  .school-card{padding:14px 16px;gap:12px}
+  .school-card .seal{width:40px;height:40px}
+  .domain-head{padding:18px 16px;gap:14px}
+  .domain-head .ic{width:48px;height:48px;border-radius:13px}
+  .domain-head .actions .btn{flex:1 1 100%}
+  .std-head{flex-direction:column}
+  .std-toggle{padding:14px 14px;gap:12px}
+  .std-link{border-inline-start:0;border-top:1px dashed var(--line);padding:8px 14px 12px;padding-inline-start:64px}
+  .std-link .btn{min-height:42px;padding-inline:12px}
+  .inds::before{right:17px}
+  .ind{grid-template-columns:36px minmax(0,1fr);gap:10px}
+  .ind-num{width:36px;height:36px;font-size:.95rem;margin-top:12px;box-shadow:0 0 0 4px var(--bg)}
+  .ind-card{flex-direction:column;align-items:stretch;gap:12px;padding:14px 16px}
+  .ind-card::before{top:20px}
+  .ind-text{font-size:1.06rem;line-height:1.9}
+  .ev-btn{align-self:flex-start}
+}
+@media (max-width:370px){
+  .std-link{padding-inline-start:14px}
+  .std-num{width:34px;height:34px}
+  .masthead h1{font-size:1.6rem}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{.sidebar,.topbar,.scrim{display:none}.shell{display:block}.std-panel[hidden]{display:block}}
+</style>
+</head>
+<body>
+<a class="skip" href="#view" id="skipLink">تخطٍّ إلى المحتوى</a>
+<div class="topbar">
+  <button class="icon-btn" id="menuBtn" aria-controls="sidebar" aria-expanded="false" aria-label="فتح القائمة">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <span class="t" id="topTitle"></span>
+</div>
+<div class="scrim" id="scrim"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar" aria-label="القائمة الرئيسية">
+    <button class="icon-btn side-close" id="sideClose" aria-label="إغلاق القائمة">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="brand">
+      <span class="seal" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span>
+      <div><small id="brandAuth"></small><strong id="brandName"></strong></div>
+    </div>
+    <nav aria-label="أقسام البوابة"><ul class="nav" id="nav"></ul></nav>
+    <div class="side-foot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>بوابة عرض للقراءة فقط</span></div>
+  </aside>
+
+  <div class="main">
+    <header class="masthead" id="masthead">
+      <h1 id="siteTitle">التقويم المدرسي للعام ٢٠٢٦</h1>
+      <div class="rule" aria-hidden="true"></div>
+    </header>
+    <main class="content" id="view" tabindex="-1"></main>
+    <footer class="site-foot" id="foot"></footer>
+  </div>
+</div>
+
+<dialog class="lightbox" id="lightbox" aria-labelledby="lbTitle">
+  <div class="lb-bar">
+    <h2 id="lbTitle"></h2>
+    <div class="lb-btns">
+      <button class="lb-btn" id="lbPrev" aria-label="الشاهد السابق" hidden><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      <button class="lb-btn" id="lbNext" aria-label="الشاهد التالي" hidden><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <button class="lb-btn" id="lbZoom" aria-pressed="false">تكبير</button>
+      <button class="lb-btn" id="lbClose" aria-label="إغلاق">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
+</dialog>
+
+<!-- البيانات المنشورة فقط: لا مسودات ولا تعليمات دمج. -->
+<script type="application/json" id="evaluation-data"></script>
+<script>window.__ASSETS__ = {};</script>
+<script>window.__PDFS__ = {};</script>
+<script>
+"use strict";
+/* ================= طبقة البيانات (منفصلة عن العرض) =================
+   النسخة الحالية: تقرأ evaluation-data.json المنشور مع الموقع (لقطة وقت الاستخراج، ليست مزامنة حية).
+   عند تفعيل المسؤول لاحقًا: تُستبدل getPublished() بقراءة وثيقة published من قاعدة البيانات. */
+const DataSource = {
+  async getPublished(){
+    const el = document.getElementById("evaluation-data");
+    if (el && el.textContent.trim().startsWith("{")) return JSON.parse(el.textContent);
+    const r = await fetch("data/evaluation-data.json", {cache:"no-cache"});
+    if (!r.ok) throw new Error("تعذر تحميل بيانات الموقع");
+    return r.json();
+  }
+};
+const ADMIN_ENABLED = false; // ثابت؛ لا يمنح أي صلاحية، والأمان يُفرض على الخادم عند التفعيل.
+
+const asset = p => (window.__ASSETS__ && window.__ASSETS__[p]) || p;
+const AR = "٠١٢٣٤٥٦٧٨٩";
+const ar = n => String(n).replace(/[0-9]/g, d => AR[d]);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+const norm = s => String(s||"").replace(/[\u064B-\u0652\u0640]/g,"").replace(/[أإآ]/g,"ا").replace(/ى/g,"ي").replace(/ة/g,"ه")
+  .replace(/[٠-٩]/g, d => AR.indexOf(d)).replace(/\s+/g," ").toLowerCase().trim();
+const byOrder = arr => [...(arr||[])].sort((a,b)=>(a.order??0)-(b.order??0));
+const hasText = v => typeof v === "string" && v.trim() !== "" && v.trim().toLowerCase() !== "null";
+/* صيغ العدد العربية */
+function count(n, [one, two, few, many]){
+  if(n===1) return one; if(n===2) return two;
+  const m = n % 100;
+  return (m>=3 && m<=10) ? `${ar(n)} ${few}` : `${ar(n)} ${many}`;
+}
+const W_STD = ["معيار واحد","معياران","معايير","معيارًا"];
+const W_IND = ["مؤشر واحد","مؤشران","مؤشرات","مؤشرًا"];
+const W_FILE = ["ملف واحد","ملفان","ملفات","ملفًا"];
+
+const S = (p, w=24, sw=1.7) => `<svg width="${w}" height="${w}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
+const ICONS = {
+  building: w=>S('<path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5M9 11h.01M15 11h.01"/>',w),
+  book:     w=>S('<path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13"/>',w),
+  growth:   w=>S('<path d="M4 20h16M6 16l4-4 3 3 5-6"/><path d="M14 9h4v4"/>',w),
+  shield:   w=>S('<path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/>',w),
+  doc:      w=>S('<path d="M14 3H6v18h12V7l-4-4z"/><path d="M14 3v4h4M9 13h6M9 17h4"/>',w),
+  folder:   w=>S('<path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/>',w,1.8),
+  ext:      w=>S('<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>',w,2),
+  zoom:     w=>S('<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M11 8v6M8 11h6"/>',w,2),
+  info:     w=>S('<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>',w,2),
+  lock:     w=>S('<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',w),
+  search:   w=>S('<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>',w,2),
+  x:        w=>S('<path d="M6 6l12 12M18 6L6 18"/>',w,2),
+  chev:     w=>S('<path d="M6 9l6 6 6-6"/>',w,2),
+  arrowL:   w=>S('<path d="M19 12H5M11 6l-6 6 6 6"/>',w,2),
+  back:     w=>S('<path d="M5 12h14M13 6l6 6-6 6"/>',w,2),
+  home:     w=>S('<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/>',w,1.8),
+  image:    w=>S('<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/>',w,1.8),
+  file:     w=>S('<path d="M14 3H6v18h12V7l-4-4z"/><path d="M14 3v4h4"/>',w,1.8),
+  eye:      w=>S('<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',w),
+  flag:     w=>S('<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',w),
+  arrowUp:  w=>S('<path d="M12 19V5M6 11l6-6 6 6"/>',w,2),
+  award:    w=>S('<circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 21l5-3 5 3-1.5-7"/>',w)
+};
+const ic = (name, w=24) => (ICONS[name]||ICONS.doc)(w);
+
+/* ترتيب القائمة النهائي */
+const NAV = [
+  {route:"intro",           key:"intro"},
+  {route:"vision",          key:"vision"},
+  {route:"achievements",    key:"achievements"},
+  {route:"report-1",        key:"report1"},
+  {route:"plan-1",          key:"plan1"},
+  {route:"self-evaluation", key:"self2"},
+  {route:"plan-2",          key:"plan2"},
+  {route:"tests",           key:"tests", sub:true}
+];
+const ROUTE_BY_KEY = Object.fromEntries(NAV.map(n=>[n.key,n.route]));
+
+let DATA = null;
+const view = document.getElementById("view");
+const ext = 'target="_blank" rel="noopener noreferrer"';
+
+/* ================= القائمة ================= */
+function renderNav(){
+  const items = [`<li class="home-link"><a href="#/" data-route=""><span class="ico">${ic("home",18)}</span><span>الرئيسية</span></a></li>`]
+    .concat(NAV.map((n,i)=>{
+      const pg = DATA.pages[n.key]; if(!pg) return "";
+      const subs = n.sub && pg.years ? `<ul class="nav-sub">${pg.years.map(y=>`<li><a href="#/${n.route}/${esc(y.year)}" data-route="${n.route}/${esc(y.year)}">${esc(y.label)}</a></li>`).join("")}</ul>` : "";
+      return `<li${subs?' class="has-sub"':''}><a href="#/${n.route}" data-route="${n.route}"><span class="num">${ar(i+1)}</span><span>${esc(pg.title||"")}</span></a>${subs}</li>`;
+    }));
+  document.getElementById("nav").innerHTML = items.join("");
+  document.getElementById("brandAuth").textContent = DATA.school.authority;
+  document.getElementById("brandName").textContent = DATA.school.name;
+  document.getElementById("topTitle").textContent = DATA.school.name;
+  document.getElementById("siteTitle").textContent = DATA.meta.siteTitle;
+  document.getElementById("foot").textContent = `${DATA.school.name} — ${DATA.school.authority}`;
+}
+function setActive(section){
+  document.querySelectorAll("#nav a").forEach(a=>{
+    const r = a.dataset.route;
+    r === section ? a.setAttribute("aria-current","page") : a.removeAttribute("aria-current");
+    a.classList.toggle("in-section", !!section && r !== "" && r !== section && section.startsWith(r + "/"));
+  });
+}
+
+/* ================= مكونات عامة ================= */
+const emptyState = (title, text, icon="doc") =>
+  `<div class="empty"><div class="em-ic">${ic(icon,26)}</div><strong>${esc(title)}</strong>${text?`<p>${esc(text)}</p>`:""}</div>`;
+const crumbs = list => `<nav class="crumbs" aria-label="مسار التنقل"><ol>${list.map((c,i)=>
+  i<list.length-1 ? `<li><a href="${c.href}">${esc(c.label)}</a></li>` : `<li><span aria-current="page">${esc(c.label)}</span></li>`).join("")}</ol></nav>`;
+const domainStats = d => {
+  const groups = d.groups||[];
+  return { stds: groups.length, inds: groups.reduce((s,g)=>s+(g.indicators||[]).length,0) };
+};
+
+/* ================= الرئيسية ================= */
+function pageHome(){
+  const p = DATA.cycle1Performance;
+  const perf = p.image ? `
+    <div class="perf">
+      <button class="perf-img" type="button" data-zoom="${esc(p.image)}" data-title="${esc(p.title)}" aria-label="تكبير صورة ${esc(p.title)}">
+        <img src="${asset(p.image)}" alt="${esc(p.alt)}">
+      </button>
+    </div>` : emptyState(p.emptyText, "", "image");
+
+  const cards = byOrder(DATA.domains).map(d=>{
+    const st = domainStats(d);
+    return `<a class="domain-card" href="#/domains/${esc(d.id)}" style="--d:${(d.order-1)*0.09}s">
+      <div class="dc-band" aria-hidden="true"><span class="dc-num">${ar(d.order)}</span></div><span class="dc-ic" aria-hidden="true">${ic(d.icon,28)}</span>
+      <div class="dc-body">
+        <span class="dc-idx">المجال ${ar(d.order)}</span>
+        <h3>${esc(d.name)}</h3>
+        <div class="dc-chips"><span class="dc-chip">المعايير <b>${ar(st.stds)}</b></span><span class="dc-chip">المؤشرات <b>${ar(st.inds)}</b></span></div>
+        <span class="dc-cta"><span>استعراض المعايير والمؤشرات</span><span class="dc-arrow">${ic("arrowL",16)}</span></span>
+      </div>
+    </a>`;}).join("");
+
+  return `
+  <section class="hero" aria-labelledby="heroH">
+    <div class="hero-text">
+      <h2 id="heroH">${esc(DATA.hero.heading)}</h2>
+      <p>${esc(DATA.hero.lead)}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#/domains">استعراض مجالات التقويم</a>
+        <a class="btn btn-ghost" href="#/report-1">${esc(DATA.pages.report1.title)}</a>
+      </div>
+    </div>
+    <div class="photo-col">
+      <figure class="photo-frame">
+        <img src="${asset(DATA.school.photo)}" alt="مدخل ${esc(DATA.school.name)}">
+      </figure>
+      <div class="school-card">
+        <span class="seal" aria-hidden="true">${ic("building",22)}</span>
+        <div>
+          <p class="auth">${esc(DATA.school.authority)}</p>
+          <p class="name">${esc(DATA.school.name)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="perfH">
+    <div class="section-head"><h2 id="perfH">${esc(p.title)}</h2></div>
+    ${perf}
+  </section>
+
+  <section class="section" id="domains" aria-labelledby="domH">
+    <div class="section-head">
+      <h2 id="domH" tabindex="-1">مجالات التقويم الذاتي المدرسي</h2>
+      <p>المعايير والمؤشرات مرتبة وفق مجلدات المدرسة المعتمدة.</p>
+    </div>
+    <div class="domains reveal" id="domainGrid">${cards}</div>
+  </section>`;
+}
+
+/* ================= صفحات المحتوى ================= */
+function pageContent(key){
+  const pg = DATA.pages[key] || {};
+  const parts = [];
+  if (hasText(pg.body)) parts.push(`<article class="prose">${pg.body.split(/\n\s*\n/).map(t=>`<p>${esc(t.trim())}</p>`).join("")}</article>`);
+  if (pg.links && pg.links.length) parts.push(`<div class="stack">${pg.links.map(l=>`
+    <div class="label-card link-row"><div><h3>${esc(l.title)}</h3>${hasText(l.note)?`<p class="muted">${esc(l.note)}</p>`:""}</div>
+      <a class="btn btn-ghost" href="${esc(l.url)}" ${ext}>${ic("ext",18)}<span>فتح المستند</span></a></div>`).join("")}</div>`);
+  const icon = key==="achievements" ? "award" : "doc";
+  return `${crumbs([{label:"الرئيسية",href:"#/"},{label:pg.title}])}
+    <h2 class="page-title" tabindex="-1">${esc(pg.title)}</h2>
+    ${parts.length ? `<div class="stack">${parts.join("")}</div>` : emptyState(pg.emptyText||"بانتظار المحتوى المعتمد.","سيظهر هنا بعد اعتماده ونشره.",icon)}`;
+}
+function pageVision(){
+  const pg = DATA.pages.vision;
+  const by = Object.fromEntries(pg.items.map(i=>[i.key,i]));
+  const card = (it, icon) => `<section class="vm-card"><div class="vm-head"><span class="vm-ic">${ic(icon,24)}</span><h3>${esc(it.label)}</h3></div>
+      ${hasText(it.text)?`<p>${esc(it.text)}</p>`:`<p class="muted">${esc(pg.emptyText)}</p>`}</section>`;
+  const vals = by.values || {label:"القيم"};
+  const list = vals.list || [];
+  return `${crumbs([{label:"الرئيسية",href:"#/"},{label:pg.title}])}
+    <h2 class="page-title vm-title" tabindex="-1">${esc(pg.title)}</h2>
+    <div class="vm">${by.vision?card(by.vision,"eye"):""}${by.mission?card(by.mission,"flag"):""}</div>
+    <div class="values-head"><span class="vm-ic">${ic("award",24)}</span><h3>${esc(vals.label)}</h3></div>
+    ${list.length ? `<ol class="values">${list.map((v,i)=>`<li class="value"><span class="value-n" aria-hidden="true">${ar(i+1)}</span><h4>${esc(v.title)}</h4><p>${esc(v.text)}</p></li>`).join("")}</ol>`
+      : hasText(vals.text) ? `<div class="prose"><p>${esc(vals.text)}</p></div>` : emptyState(pg.emptyText,"","doc")}`;
+}
+
+/* ================= صفحة المجال ================= */
+function pageDomain(id){
+  const d = DATA.domains.find(x=>x.id===id);
+  if(!d) return pageNotFound();
+  const gd = DATA.groupDefaults || {};
+  const st = domainStats(d);
+  const stds = byOrder(d.groups).map((g0,gi)=>{
+    const g = {...gd, ...g0};
+    const pid = `std-${esc(d.id)}-${gi}`;
+    const inds = byOrder(g.indicators);
+    const files = g.directFiles || [];
+    const indHtml = inds.map(ind=>`
+      <li class="ind" data-search="${esc(norm([ind.code, ind.text].filter(hasText).join(" ")))}">
+        <span class="ind-num" aria-hidden="true">${ar(ind.order)}</span>
+        <div class="ind-card">
+        <div class="ind-body">
+          ${hasText(ind.code)?`<span class="ind-code">${esc(ind.code)}</span>`:""}
+          <p class="ind-text"><span class="sr-only">المؤشر ${ar(ind.order)}: </span>${esc(ind.text)}</p>
+        </div>
+        ${hasText(ind.folderUrl)
+          ? `<a class="ev-btn" href="${esc(ind.folderUrl)}" ${ext} aria-label="فتح مجلد الشواهد: ${esc(ind.text)}">${ic("folder",17)}<span>فتح مجلد الشواهد</span></a>`
+          : `<span class="pill">${esc(gd.folderNote||"الرابط يحتاج إلى مراجعة")}</span>`}
+        </div>
+      </li>`).join("");
+    const filesHtml = files.length ? `
+      <div class="files">
+        <h4>ملفات مباشرة داخل مجلد المعيار <span>${count(files.length,W_FILE)}</span></h4>
+        <ul>${files.map(f=>`<li data-search="${esc(norm(f.title))}"><a href="${esc(f.url)}" ${ext}>${ic(/^image\//.test(f.mimeType||"")?"image":"file",18)}<span class="t">${esc(f.title)}</span>${ic("ext",16)}</a></li>`).join("")}</ul>
+      </div>` : "";
+    return `<section class="std" data-search="${esc(norm(g.name))}">
+      <div class="std-head">
+        <button class="std-toggle" type="button" aria-expanded="false" aria-controls="${pid}">
+          <span class="std-num" aria-hidden="true">${ar(g.order)}</span>
+          <span class="std-titles"><span class="std-name">${esc(g.name)}</span><span class="std-count">${inds.length?count(inds.length,W_IND):"لا توجد مؤشرات مدخلة"}</span></span>
+          <span class="std-chev">${ic("chev",20)}</span>
+        </button>
+        ${hasText(g.folderUrl)
+          ? `<div class="std-link"><a class="btn btn-ghost btn-sm" href="${esc(g.folderUrl)}" ${ext} aria-label="فتح مجلد المعيار: ${esc(g.name)}">${ic("folder",17)}<span>فتح مجلد المعيار</span></a></div>`
+          : `<div class="std-link"><span class="pill">${esc(g.folderNote||"الرابط يحتاج إلى مراجعة")}</span></div>`}
+      </div>
+      <div class="std-panel" id="${pid}" hidden>
+        ${inds.length ? `<ol class="inds">${indHtml}</ol>` : `<p class="ind-note">${esc(gd.indicatorsNote||"لا توجد مؤشرات مدخلة لهذا المعيار.")}</p>`}
+        ${filesHtml}
+      </div>
+    </section>`;
+  }).join("");
+
+  const others = byOrder(DATA.domains).filter(x=>x.id!==d.id);
+  const guide = DATA.meta.indicatorsGuide;
+  return `${crumbs([{label:"الرئيسية",href:"#/"},{label:"مجالات التقويم",href:"#/domains"},{label:d.name}])}
+    <div class="domain-head">
+      <span class="ic">${ic(d.icon,30)}</span>
+      <div>
+        <h2 class="page-title" tabindex="-1" style="margin:0">${esc(d.name)}</h2>
+        <p class="desc">المعايير والمؤشرات مرتبة وفق مجلدات المدرسة المعتمدة، وتُفتح الشواهد عبر Google Drive.</p>
+        <div class="facts"><span>المعايير: <b>${ar(st.stds)}</b></span><span>المؤشرات: <b>${ar(st.inds)}</b></span></div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-ghost" href="${esc(d.folder.url)}" ${ext}>${ic("folder",18)}<span>فتح مجلد المجال</span></a>
+      </div>
+    </div>
+    <div class="toolbar">
+      <label class="search"><span class="sr-only">ابحث باسم المعيار أو نص المؤشر أو رمزه</span>
+        <input type="search" id="q" placeholder="ابحث في المعايير والمؤشرات" autocomplete="off" enterkeyhint="search">
+        <span class="s-ic">${ic("search",20)}</span>
+        <button type="button" class="clear" id="qClear" aria-label="مسح البحث">${ic("x",18)}</button>
+      </label>
+      <button class="btn btn-ghost" type="button" id="toggleAll" aria-pressed="false">فتح جميع المعايير</button>
+    </div>
+    <p class="search-status" id="qStatus" aria-live="polite"></p>
+    <div class="stds" id="stds">${stds}</div>
+    <div class="no-results" id="noRes">${emptyState("لا توجد نتائج مطابقة","جرّب كلمة أخرى من اسم المعيار أو نص المؤشر.","search")}</div>
+    <div class="back-row">
+      <a class="btn btn-ghost" href="#/domains">${ic("back",18)}<span>العودة إلى المجالات</span></a>
+      ${others.map(o=>`<a class="btn btn-ghost" href="#/domains/${esc(o.id)}">${esc(o.name)}</a>`).join("")}
+    </div>
+    ${guide && hasText(guide.url) ? `<p class="source-line">${ic("doc",18)}<span>المرجع: <a href="${esc(guide.url)}" ${ext}>${esc(guide.title)}</a></span></p>`:""}`;
+}
+
+function bindReveal(){
+  const g = document.getElementById("domainGrid"); if(!g) return;
+  const finish = ()=>{ g.classList.add("in"); setTimeout(()=>g.classList.add("done"), 1000); };
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) { g.classList.add("in","done"); return; }
+  const io = new IntersectionObserver(es=>{ if(es.some(e=>e.isIntersecting)){ io.disconnect(); finish(); } }, {threshold:.15});
+  io.observe(g);
+  g.addEventListener("focusin", ()=>{ io.disconnect(); g.classList.add("in","done"); }, {once:true});
+}
+function setStd(sec, open){
+  const btn = sec.querySelector(".std-toggle"), panel = sec.querySelector(".std-panel");
+  btn.setAttribute("aria-expanded", String(open)); panel.hidden = !open; sec.classList.toggle("open", open);
+}
+function bindDomain(){
+  const root = document.getElementById("stds"); if(!root) return;
+  const secs = [...root.querySelectorAll(".std")];
+  const toggleAll = document.getElementById("toggleAll");
+  const syncAll = () => { const allOpen = secs.filter(s=>!s.hidden).every(s=>s.classList.contains("open"));
+    toggleAll.textContent = allOpen ? "إغلاق جميع المعايير" : "فتح جميع المعايير"; toggleAll.setAttribute("aria-pressed", String(allOpen)); };
+  /* الضغط على العنوان فقط يفتح/يغلق؛ زر المجلد خارج زر الفتح فلا يتداخل معه */
+  root.addEventListener("click", e=>{
+    const t = e.target.closest(".std-toggle"); if(!t) return;
+    const sec = t.closest(".std"); setStd(sec, !sec.classList.contains("open")); syncAll();
+  });
+  toggleAll.addEventListener("click", ()=>{ const open = toggleAll.getAttribute("aria-pressed")!=="true"; secs.filter(s=>!s.hidden).forEach(s=>setStd(s,open)); syncAll(); });
+
+  const q = document.getElementById("q"), clr = document.getElementById("qClear");
+  const noRes = document.getElementById("noRes"), status = document.getElementById("qStatus");
+  const run = ()=>{
+    const term = norm(q.value);
+    clr.classList.toggle("show", !!q.value);
+    let hitStd = 0, hitInd = 0;
+    secs.forEach(sec=>{
+      const items = [...sec.querySelectorAll(".ind, .files li")];
+      if(!term){ sec.hidden=false; items.forEach(i=>i.hidden=false); return; }
+      const selfHit = sec.dataset.search.includes(term);
+      let anyChild = false;
+      items.forEach(i=>{ const h = i.dataset.search.includes(term); i.hidden = !(h||selfHit); if(h){ anyChild = true; if(i.classList.contains("ind")) hitInd++; } });
+      const files = sec.querySelector(".files");
+      if(files) files.hidden = !selfHit && ![...files.querySelectorAll("li")].some(li=>!li.hidden);
+      const show = selfHit || anyChild;
+      sec.hidden = !show;
+      if(show){ hitStd++; setStd(sec,true); }
+    });
+    if(!term){ secs.forEach(s=>{ const f=s.querySelector(".files"); if(f) f.hidden=false; }); }
+    noRes.classList.toggle("show", !!term && hitStd===0);
+    status.textContent = !term ? "" : hitStd ? `النتائج: ${count(hitStd,W_STD)}${hitInd?`، ${count(hitInd,W_IND)}`:""}` : "لا توجد نتائج";
+    syncAll();
+  };
+  q.addEventListener("input", run);
+  clr.addEventListener("click", ()=>{ q.value=""; run(); q.focus(); });
+  q.addEventListener("keydown", e=>{ if(e.key==="Escape" && q.value){ e.preventDefault(); q.value=""; run(); } });
+}
+
+
+/* ================= تقرير الدورة الأولى ================= */
+const LV = ["التميز","التقدم","الانطلاق","التهيئة"];
+const pct = n => `${ar(String(+n)).replace(".","٫")}٪`;
+function bar(name, value, level){
+  return `<div class="bar-row c-${level}"><span class="bn">${esc(name)}</span><span class="bar-track" aria-hidden="true"><i class="bar-fill" style="--w:${value}%"></i></span><span class="bv">${pct(value)}</span></div>`;
+}
+const levelOf = p => p>=90?"التميز":p>=75?"التقدم":p>=50?"الانطلاق":"التهيئة";
+function gauge(p, level){
+  /* نصف دائرة: أربعة نطاقات بحدود ٥٠/٧٥/٩٠ كما في التقرير، ومؤشر عند القيمة */
+  const cx=140, cy=140, r=110, w=26;
+  const pt = (v,rr)=>{ const a=Math.PI*(1-v/100); return [cx+rr*Math.cos(a), cy-rr*Math.sin(a)]; };
+  const arc = (a,b,col)=>{ const [x1,y1]=pt(a,r),[x2,y2]=pt(b,r); return `<path d="M${x1.toFixed(1)} ${y1.toFixed(1)} A${r} ${r} 0 0 1 ${x2.toFixed(1)} ${y2.toFixed(1)}" stroke="${col}" stroke-width="${w}" fill="none"/>`; };
+  const [nx,ny]=pt(p,44);
+  return `<svg viewBox="0 0 280 170" role="img" aria-label="الأداء العام ${pct(p)} — ${level}">
+    ${arc(0,50,"var(--lv-h)")}${arc(50,75,"var(--lv-n)")}${arc(75,90,"var(--lv-q)")}${arc(90,100,"var(--lv-t)")}
+    <line x1="${cx}" y1="${cy}" x2="${nx.toFixed(1)}" y2="${ny.toFixed(1)}" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="${cx}" cy="${cy}" r="9" fill="var(--ink)"/>
+    <text x="${cx}" y="${cy-52}" text-anchor="middle" font-size="40" font-weight="700" fill="var(--ink)" font-family="IBM Plex Sans Arabic, sans-serif">${pct(p)}</text>
+  </svg>`;
+}
+function rpTabs(R){
+  const doms = R.domains;
+  const tabs = doms.map((d,i)=>`<button class="tab" role="tab" id="tab-${i}" aria-controls="tp-${i}" aria-selected="${i===0}" tabindex="${i===0?0:-1}">${esc(d.name)} <span class="tp">${pct(d.pct)}</span></button>`).join("");
+  const panels = doms.map((d,i)=>{
+    const counts = Object.fromEntries(LV.map(l=>[l,0])); let total=0;
+    d.standards.forEach(s=>s.indicators.forEach(x=>{counts[x.level]++; total++;}));
+    const chips = `<button class="chip" data-f="all" aria-pressed="true">الكل <span>${ar(total)}</span></button>` +
+      LV.filter(l=>counts[l]).map(l=>`<button class="chip c-${l}" data-f="${l}" aria-pressed="false"><span class="cd"></span>${l} <span>${ar(counts[l])}</span></button>`).join("");
+    const stds = d.standards.map(s=>`
+      <section class="std-block">
+        <h4>${esc(s.name)} <span class="lv lv-${levelOf(s.pct)}">${levelOf(s.pct)}</span><span class="sp">${pct(s.pct)}</span></h4>
+        ${s.indicators.map(x=>`
+          <article class="rind c-${x.level}" data-lv="${x.level}">
+            <div class="rind-top">
+              <div><span class="code">${esc(x.code)}</span><p class="rind-text">${esc(x.text)}</p></div>
+              <div class="rind-score"><b>${pct(x.pct)}</b><span class="lv lv-${x.level}">${x.level}</span></div>
+              <div class="rind-bar" aria-hidden="true"><i style="--w:${x.pct}%"></i></div>
+            </div>
+            <details><summary>مقترح التحسين ${ic("chev",16)}</summary>
+              <p class="finding">${esc(R.findingByLevel[x.level]||"")}</p><p class="rec">${esc(x.recommendation)}</p></details>
+          </article>`).join("")}
+      </section>`).join("");
+    return `<div class="tp-panel" role="tabpanel" id="tp-${i}" aria-labelledby="tab-${i}" ${i?"hidden":""}>
+      <p class="dom-desc">${esc(d.desc)}</p>
+      <div class="rp-card"><div class="bars">${d.standards.map(s=>bar(s.name,s.pct,levelOf(s.pct))).join("")}</div></div>
+      <div class="filters" role="group" aria-label="تصفية المؤشرات حسب المستوى">${chips}</div>
+      ${stds}
+    </div>`;
+  }).join("");
+  return {tabs, panels};
+}
+function pageReport1(){
+  const pg = DATA.pages.report1, R = pg.report;
+  if(!R) return pageContent("report1");
+  const doms = R.domains;
+  const {tabs, panels} = rpTabs(R);
+  const links = pg.links && pg.links.length ? `<div class="stack" style="margin-top:16px">${pg.links.map(l=>`<div class="label-card link-row"><h3>${esc(l.title)}</h3><a class="btn btn-ghost" href="${esc(l.url)}" ${ext}>${ic("ext",18)}<span>فتح المستند</span></a></div>`).join("")}</div>`:"";
+  const info = R.school.map(([k,v])=>`<div class="${k==="اسم المدرسة"||k==="إدارة التعليم"?"wide":""}"><dt>${esc(k)}</dt><dd>${/^[0-9]+$/.test(v)?ar(v):esc(v)}</dd></div>`).join("");
+  return `${crumbs([{label:"الرئيسية",href:"#/"},{label:pg.title}])}
+    <h2 class="page-title" tabindex="-1">${esc(pg.title)}</h2>
+    <header class="rp-hero">
+      <div class="rp-issuer"><span>${esc(R.issuer)}</span><span class="rp-tag">${ic("lock",14)} ${esc(R.classification)}</span></div>
+      <h2>${esc(R.title)}</h2>
+      <p class="rp-school">${esc(R.school[0][1])} — ${esc(R.school[1][1])}</p>
+      <div class="rp-meta"><span>تاريخ تطبيق التقويم: <b>${ar(R.evaluationDate)}</b></span><span>الأداء العام: <b>${pct(R.overall.pct)} — ${esc(R.overall.level)}</b></span></div>
+      <div class="rp-update"><span>${esc(R.updateIntro)}</span><ul>${R.updateNotes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div>
+    </header>
+    ${links}
+    <nav class="rp-nav" aria-label="أقسام التقرير">
+      <button data-go="rp-ov">الأداء العام</button><button data-go="rp-sum">ملخص النتائج</button><button data-go="rp-det">الأداء التفصيلي</button>
+      <button data-go="rp-sh">آراء أصحاب المصلحة</button><button data-go="rp-info">معلومات المدرسة</button>
+    </nav>
+
+    <section class="rp-sec" id="rp-ov" aria-labelledby="h-ov"><h3 id="h-ov">الأداء العام للمدرسة</h3>
+      <div class="rp-card">
+        <div class="ov">
+          <div class="gauge c-${R.overall.level}">${gauge(R.overall.pct,R.overall.level)}<span class="lv lv-${R.overall.level}" style="font-size:var(--fs-base);padding:4px 18px">${esc(R.overall.level)}</span><span class="g-label">${esc(R.overall.label)}</span></div>
+          <div><h4 style="margin:0 0 16px;font-size:var(--fs-base)">أداء المدرسة وفق المجالات</h4><div class="bars">${doms.map(d=>bar(d.name,d.pct,levelOf(d.pct))).join("")}</div></div>
+        </div>
+        <div class="years"><span class="yl">أداء المدرسة في التقويم المدرسي عبر السنوات. ${esc(R.yearsNotes[1])}</span>
+          ${R.years.map(y=>`<span class="yr"><b>${pct(y.pct)}</b><i style="--h:${y.pct}"></i>${ar(y.year)}</span>`).join("")}</div>
+      </div>
+      <div class="legend">${R.levels.map(l=>`<div class="lg c-${l.name}"><b>${esc(l.name)}</b>${esc(l.desc)}</div>`).join("")}</div>
+    </section>
+
+    <section class="rp-sec" id="rp-sum" aria-labelledby="h-sum"><h3 id="h-sum">ملخص نتائج المدرسة</h3>
+      <div class="rp-card"><p class="summary-lead">${esc(R.summary)}</p>
+        <div class="sw">
+          <div class="sw-box c-التميز"><h4><span class="dot"></span>جوانب التميز</h4><p class="in">${esc(R.strengthsIntro)}</p>
+            <ul>${R.strengths.map(([c,t])=>`<li><span class="code">${esc(c)}</span><span>${esc(t)}</span></li>`).join("")}</ul></div>
+          <div class="sw-box c-الانطلاق"><h4><span class="dot"></span>جوانب تحتاج إلى تحسين</h4><p class="in">${esc(R.improvementsIntro)}</p>
+            <ul>${R.improvements.map(([c,t])=>`<li><span class="code">${esc(c)}</span><span>${esc(t)}</span></li>`).join("")}</ul></div>
+        </div>
+        <p class="note">* ${esc(R.improvementsNote)}</p>
+      </div>
+    </section>
+
+    <section class="rp-sec" id="rp-det" aria-labelledby="h-det"><h3 id="h-det">الأداء التفصيلي لنتائج المدرسة</h3>
+      <p class="dom-desc">${esc(R.detailIntro)}</p>
+      <div class="tabs" role="tablist" aria-label="مجالات التقويم">${tabs}</div>
+      ${panels}
+    </section>
+
+    <section class="rp-sec" id="rp-sh" aria-labelledby="h-sh"><h3 id="h-sh">آراء أصحاب المصلحة</h3>
+      <p class="dom-desc">${esc(R.stakeholdersIntro)}</p>
+      <div class="sh">${R.stakeholders.map(g=>`<div class="rp-card"><h4>${esc(g.name)}</h4><div class="bars">${g.values.map((v,i)=>bar(R.stakeholderDomains[i],v,levelOf(v))).join("")}</div></div>`).join("")}</div>
+    </section>
+
+    <section class="rp-sec" id="rp-info" aria-labelledby="h-info"><h3 id="h-info">معلومات المدرسة</h3>
+      <dl class="info" style="margin:0">${info}</dl>
+      <p class="note">* ${esc(R.schoolNote)}</p>
+    </section>
+
+    ${sourceCard({title:R.title, issuer:`${R.issuer} — ${R.school[0][1]}`, pages:R.source&&R.source.pages, classification:R.classification, href:R.source&&R.source.href, file:R.source&&!R.source.driveUrl&&R.source.file, button:R.source&&R.source.driveUrl?"فتح التقرير في Google Drive":"فتح التقرير الأصلي", notes:[R.codeNote, R.notIncluded]})}`;
+}
+function bindReport(){
+  document.querySelectorAll(".rp-nav [data-go]").forEach(b=>b.addEventListener("click",()=>{
+    const t=document.getElementById(b.dataset.go); t.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"}); t.querySelector("h3").setAttribute("tabindex","-1"); t.querySelector("h3").focus({preventScroll:true}); }));
+  const root = document.getElementById("rp-det"); if(!root) return;
+  const tabs=[...root.querySelectorAll(".tab")];
+  const select = i => { tabs.forEach((t,j)=>{ t.setAttribute("aria-selected",String(i===j)); t.tabIndex = i===j?0:-1; document.getElementById(t.getAttribute("aria-controls")).hidden = i!==j; }); tabs[i].focus(); };
+  tabs.forEach((t,i)=>{ t.addEventListener("click",()=>select(i)); t.addEventListener("keydown",e=>{
+    if(e.key==="ArrowLeft"){e.preventDefault();select((i+1)%tabs.length);} if(e.key==="ArrowRight"){e.preventDefault();select((i-1+tabs.length)%tabs.length);}
+    if(e.key==="Home"){e.preventDefault();select(0);} if(e.key==="End"){e.preventDefault();select(tabs.length-1);} }); });
+  root.querySelectorAll(".tp-panel").forEach(p=>{
+    const chips=[...p.querySelectorAll(".chip")];
+    chips.forEach(c=>c.addEventListener("click",()=>{
+      chips.forEach(x=>x.setAttribute("aria-pressed",String(x===c)));
+      const f=c.dataset.f;
+      p.querySelectorAll(".rind").forEach(r=>r.hidden = f!=="all" && r.dataset.lv!==f);
+      p.querySelectorAll(".std-block").forEach(b=>b.hidden = ![...b.querySelectorAll(".rind")].some(r=>!r.hidden));
+    }));
+  });
+}
+
+
+function sourceCard({title, issuer, pages, classification, href, file, button, notes}){
+  return `<section class="source-card" aria-labelledby="srcH">
+    <span class="si" aria-hidden="true">${ic("file",28)}</span>
+    <div><h3 id="srcH">المصدر</h3><p class="st">${esc(title)}</p><p class="sm">${esc(issuer)}</p>
+      <p class="sf"><span>ملف PDF</span>${pages?`<span>${ar(pages)} صفحة</span>`:""}${classification?`<span>التصنيف: ${esc(classification)}</span>`:""}</p></div>
+    ${href?`<a class="btn btn-primary" href="${esc(href)}" data-pdf="${esc(file||"")}" ${ext}>${ic("ext",18)}<span>${esc(button)}</span></a>`:""}
+    ${notes&&notes.length?`<div class="notes">${notes.map(n=>`<span>${esc(n)}</span>`).join("")}</div>`:""}
+  </section>`;
+}
+/* ================= خطة التحسين (الدورة الأولى) ================= */
+const LVC={"التميز":"var(--lv-t)","التقدم":"var(--lv-q)","الانطلاق":"var(--lv-n)","التهيئة":"var(--lv-h)"};
+const planKind = i => i.current.levelKey===i.target.levelKey ? (i.target.levelKey==="التميز"?"keep":"within") : "raise";
+function pagePlan1(){
+  const pg = DATA.pages.plan1, P = pg.plan;
+  if(!P) return pageContent("plan1");
+  const all = P.domains.flatMap(d=>d.standards.flatMap(s=>s.indicators));
+  const nActs = all.reduce((n,i)=>n+i.activities.length,0);
+  const kinds = {raise:0,within:0,keep:0}; all.forEach(i=>kinds[planKind(i)]++);
+  const card = i => {
+    const k = planKind(i);
+    const search = norm([i.code,i.text,i.objectives.join(" "),i.activities.join(" "),i.executor.join(" "),i.targetGroup.join(" "),i.requirements,i.achievement].join(" "));
+    return `<article class="pind" data-kind="${k}" data-search="${esc(search)}">
+      <div class="pind-head">
+        <div><span class="code">${esc(i.code)}</span><p class="pind-text">${esc(i.text)}</p></div>
+        <div class="shift" aria-label="من ${pct(i.current.pct)} ${esc(i.current.level)} إلى ${pct(i.target.pct)} ${esc(i.target.level)}">
+          <div class="st"><small>الحالية</small><b>${pct(i.current.pct)}</b><span class="lv lv-${i.current.levelKey}">${esc(i.current.level)}</span></div>
+          <span class="arr" aria-hidden="true">${ic("arrowL",22)}</span>
+          <div class="st"><small>المستهدفة</small><b>${pct(i.target.pct)}</b><span class="lv lv-${i.target.levelKey}">${esc(i.target.level)}</span></div>
+        </div>
+      </div>
+      <div class="gapbar" aria-hidden="true" style="--c-w:${i.current.pct}%;--t-w:${i.target.pct}%;--cc:${LVC[i.current.levelKey]};--tc:${LVC[i.target.levelKey]}"><span class="zone"></span><span class="cur"></span><span class="tgt"></span></div>
+      <div class="gaplegend"><span>الشريط الممتلئ: الدرجة الحالية</span><span>المنطقة المخططة: حتى الدرجة المستهدفة</span></div>
+      ${i.objectives.map(o=>`<div class="objective">${ic("flag",20)}<div><b>الهدف</b><span>${esc(o)}</span></div></div>`).join("")}
+      <div class="pl-body">
+        <div><h5>الأنشطة وأساليب التنفيذ</h5><ol class="acts">${i.activities.map(a=>`<li><span>${esc(a)}</span></li>`).join("")}</ol></div>
+        <div class="meta"><dl>
+          <div><dt>المنفذ</dt><dd class="tags">${i.executor.map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</dd></div>
+          <div><dt>الفئة المستهدفة</dt><dd class="tags">${i.targetGroup.map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</dd></div>
+          <div><dt>فترة التنفيذ</dt><dd class="period"><span>${esc(i.period.from)}</span>${ic("arrowL",16)}<span>${esc(i.period.to)}</span></dd></div>
+          <div><dt>المتطلبات</dt><dd>${esc(i.requirements)}</dd></div>
+          <div><dt>مؤشر الإنجاز</dt><dd>${esc(i.achievement)}</dd></div>
+        </dl></div>
+      </div>
+    </article>`;
+  };
+  const tabs = P.domains.map((d,n)=>`<button class="tab" role="tab" id="ptab-${n}" aria-controls="ptp-${n}" aria-selected="${n===0}" tabindex="${n===0?0:-1}">${esc(d.name)} <span class="tp">${ar(d.standards.reduce((c,s)=>c+s.indicators.length,0))}</span></button>`).join("");
+  const panels = P.domains.map((d,n)=>`<div class="tp-panel" role="tabpanel" id="ptp-${n}" aria-labelledby="ptab-${n}" ${n?"hidden":""}>
+      ${d.standards.map(s=>`<section class="std-block"><h4>${esc(s.name)} <span class="sp">${count(s.indicators.length,W_IND)}</span></h4>${s.indicators.map(card).join("")}</section>`).join("")}
+    </div>`).join("");
+  return `${crumbs([{label:"الرئيسية",href:"#/"},{label:pg.title}])}
+    <h2 class="page-title" tabindex="-1">${esc(pg.title)}</h2>
+    <header class="rp-hero">
+      <div class="rp-issuer"><span>${esc(P.authority)}</span><span class="rp-tag">${esc(P.committee)}</span></div>
+      <h2>${esc(P.title)}</h2>
+      <p class="rp-school">مدرسة ${esc(P.school)} — المرحلة ${esc(P.stage)}</p>
+      <div class="rp-meta"><span>${esc(P.basis)}</span><span>مدير المدرسة: <b>${esc(P.principal)}</b></span></div>
+    </header>
+    <div class="kpis">
+      <div class="kpi"><b>${ar(all.length)}</b><span>المؤشرات في الخطة</span></div>
+      <div class="kpi"><b>${ar(nActs)}</b><span>الأنشطة وأساليب التنفيذ</span></div>
+      <div class="kpi"><b>${ar(kinds.raise)}</b><span>مؤشرات مستهدف رفع مستواها</span></div>
+      <div class="kpi"><b>${ar(kinds.keep)}</b><span>مؤشرات لاستدامة التميز</span></div>
+    </div>
+    <section class="rp-sec" id="pl-det" aria-label="مؤشرات الخطة">
+      <div class="pl-tools">
+        <label class="search"><span class="sr-only">ابحث في الخطة</span>
+          <input type="search" id="pq" placeholder="ابحث في المؤشرات والأنشطة والمنفذين" autocomplete="off">
+          <span class="s-ic">${ic("search",20)}</span></label>
+      </div>
+      <div class="filters" role="group" aria-label="تصفية حسب نوع الهدف">
+        <button class="chip" data-f="all" aria-pressed="true">الكل</button>
+        <button class="chip" data-f="raise" aria-pressed="false">رفع المستوى <span>${ar(kinds.raise)}</span></button>
+        <button class="chip" data-f="within" aria-pressed="false">تحسين داخل المستوى <span>${ar(kinds.within)}</span></button>
+        <button class="chip" data-f="keep" aria-pressed="false">استدامة التميز <span>${ar(kinds.keep)}</span></button>
+      </div>
+      <p class="search-status" id="pStatus" aria-live="polite"></p>
+      <div class="tabs" role="tablist" aria-label="مجالات الخطة">${tabs}</div>
+      ${panels}
+      <div class="no-results" id="pNoRes">${emptyState("لا توجد مؤشرات مطابقة","غيّر كلمة البحث أو نوع التصفية.","search")}</div>
+    </section>
+    ${sourceCard({title:P.title, issuer:`${P.committee} — مدرسة ${P.school} الثانوية`, pages:P.source&&P.source.pages, href:P.source&&P.source.href, file:P.source&&!P.source.driveUrl&&P.source.file, button:P.source&&P.source.driveUrl?"فتح الخطة في Google Drive":"فتح الخطة الأصلية", notes:[P.codeNote, P.followUpNote]})}`;
+}
+function bindPlan(){
+  const root=document.getElementById("pl-det"); if(!root) return;
+  const tabs=[...root.querySelectorAll(".tab")], panels=[...root.querySelectorAll(".tp-panel")];
+  const q=document.getElementById("pq"), chips=[...root.querySelectorAll(".chip")], status=document.getElementById("pStatus"), nores=document.getElementById("pNoRes");
+  let filter="all";
+  const select=(i,focus=true)=>{ tabs.forEach((t,j)=>{t.setAttribute("aria-selected",String(i===j)); t.tabIndex=i===j?0:-1; panels[j].hidden=i!==j;}); if(focus) tabs[i].focus(); apply(); };
+  const apply=()=>{
+    const term=norm(q.value); let shown=0, perTab=panels.map(()=>0);
+    panels.forEach((p,j)=>{
+      p.querySelectorAll(".pind").forEach(c=>{ const ok=(filter==="all"||c.dataset.kind===filter)&&(!term||c.dataset.search.includes(term)); c.hidden=!ok; if(ok) perTab[j]++; });
+      p.querySelectorAll(".std-block").forEach(b=>b.hidden=![...b.querySelectorAll(".pind")].some(c=>!c.hidden));
+    });
+    tabs.forEach((t,j)=>{ t.querySelector(".tp").textContent=ar(perTab[j]); });
+    const cur=tabs.findIndex(t=>t.getAttribute("aria-selected")==="true");
+    shown=perTab[cur];
+    const total=perTab.reduce((a,b)=>a+b,0);
+    nores.classList.toggle("show", shown===0);
+    status.textContent = (term||filter!=="all") ? `النتائج: ${count(total,W_IND)} في جميع المجالات` : "";
+  };
+  tabs.forEach((t,i)=>{ t.addEventListener("click",()=>select(i)); t.addEventListener("keydown",e=>{
+    if(e.key==="ArrowLeft"){e.preventDefault();select((i+1)%tabs.length);} if(e.key==="ArrowRight"){e.preventDefault();select((i-1+tabs.length)%tabs.length);}
+    if(e.key==="Home"){e.preventDefault();select(0);} if(e.key==="End"){e.preventDefault();select(tabs.length-1);} }); });
+  chips.forEach(c=>c.addEventListener("click",()=>{ filter=c.dataset.f; chips.forEach(x=>x.setAttribute("aria-pressed",String(x===c))); apply(); }));
+  q.addEventListener("input",apply);
+}
+
+/* ================= تقرير التقويم الذاتي ٢٠٢٦ ================= */
+function pageSelf2(){
+  const pg = DATA.pages.self2, R = pg.report;
+  if(!R) return pageContent("self2");
+  const doms = R.domains;
+  const {tabs, panels} = rpTabs(R);
+  const counts = {}; doms.forEach(d=>d.standards.forEach(s=>s.indicators.forEach(i=>counts[i.level]=(counts[i.level]||0)+1)));
+  const total = Object.values(counts).reduce((a,b)=>a+b,0);
+  const info = R.school.map(([k,v])=>`<div class="${k==="اسم المدرسة"||k==="إدارة التعليم"?"wide":""}"><dt>${esc(k)}</dt><dd>${/^[0-9]+$/.test(v)?ar(v):esc(v)}</dd></div>`).join("");
+  return `${crumbs([{label:"الرئيسية",href:"#/"},{label:pg.title}])}
+    <h2 class="page-title" tabindex="-1">${esc(pg.title)}</h2>
+    <header class="rp-hero">
+      <div class="rp-issuer"><span>${esc(R.issuer)}</span><span class="rp-tag">${esc(R.cycle)}</span></div>
+      <h2>${esc(R.title)}</h2>
+      <p class="rp-school">${esc(R.school[0][1])} — ${esc(R.school[2][1])}</p>
+      <div class="rp-meta"><span>الأداء العام: <b>${pct(R.overall.pct)} — ${esc(R.overall.level)}</b></span><span>عدد الطلبة: <b>${ar(R.school[5][1])}</b></span></div>
+    </header>
+    <nav class="rp-nav" aria-label="أقسام التقرير">
+      <button data-go="rp-ov">الأداء العام</button><button data-go="rp-det">الأداء وفق المؤشرات</button><button data-go="rp-info">البيانات الأساسية</button>
+    </nav>
+    <section class="rp-sec" id="rp-ov" aria-labelledby="h-ov"><h3 id="h-ov">الأداء العام للمدرسة</h3>
+      <div class="notice" role="note">${ic("info",18)}<span>${esc(R.overallNote)}</span></div>
+      <div class="rp-card">
+        <div class="ov">
+          <div class="gauge c-${R.overall.level}">${gauge(R.overall.pct,R.overall.level)}<span class="lv lv-${R.overall.level}" style="font-size:var(--fs-base);padding:4px 18px">${esc(R.overall.level)}</span></div>
+          <div><h4 style="margin:0 0 16px;font-size:var(--fs-base)">أداء المدرسة وفق المجالات</h4><div class="bars">${doms.map(d=>bar(d.name,d.pct,levelOf(d.pct))).join("")}</div></div>
+        </div>
+        <div class="years"><span class="yl">توزيع المؤشرات حسب المستوى (محسوب من التقرير)</span>
+          ${LV.filter(l=>counts[l]).map(l=>`<span class="lv lv-${l}">${l}: ${ar(counts[l])} من ${ar(total)}</span>`).join("")}</div>
+      </div>
+      <div class="legend">${R.levels.map(l=>`<div class="lg c-${l.name}"><b>${esc(l.name)}</b>${ar(esc(l.desc))}</div>`).join("")}</div>
+    </section>
+    <section class="rp-sec" id="rp-det" aria-labelledby="h-det"><h3 id="h-det">أداء المدرسة وفق المعايير والمؤشرات</h3>
+      <div class="tabs" role="tablist" aria-label="مجالات التقويم">${tabs}</div>
+      ${panels}
+    </section>
+    <section class="rp-sec" id="rp-info" aria-labelledby="h-info"><h3 id="h-info">البيانات الأساسية للمدرسة</h3>
+      <dl class="info" style="margin:0">${info}</dl>
+    </section>
+    ${sourceCard({title:`${R.title} — ${R.cycle}`, issuer:`${R.issuer} — ${R.school[0][1]}`, pages:R.source&&R.source.pages, href:R.source&&R.source.href, file:R.source&&!R.source.driveUrl&&R.source.file, button:R.source&&R.source.driveUrl?"فتح التقرير في Google Drive":"فتح التقرير الأصلي", notes:[R.codeNote, R.transcriptionNote]})}`;
+}
+
+/* ================= خطة التحسين بناءً على التقويم الذاتي ================= */
+const prose = t => esc(t).replace(/\d+(?:-\d+){3}/g, m=>`<bdi dir="ltr" class="code-inline">${m}</bdi>`);
+function pagePlan2(){
+  const pg = DATA.pages.plan2, P = pg.plan;
+  if(!P) return pageContent("plan2");
+  const lvOf = l => LV.includes(l) ? l : levelOf(0);
+  const main = P.main.map(m=>`
+    <article class="mi">
+      <div class="mi-head">
+        <div class="mi-path"><span>المجال: <b>${esc(m.domain)}</b> (${pct(m.domainPct)})</span><span>المعيار: <b>${esc(m.standard)}</b> (${pct(m.standardPct)})</span></div>
+        <div class="pind-head">
+          <div><span class="code">${esc(m.code)}</span><p class="pind-text">${esc(m.text)}</p></div>
+          <div class="shift" aria-label="من ${pct(m.current.pct)} ${esc(m.current.level)} إلى ${pct(m.target.pct)} ${esc(m.target.level)}">
+            <div class="st"><small>الدرجة الحالية</small><b>${pct(m.current.pct)}</b><span class="lv lv-${m.current.level}">${esc(m.current.level)}</span></div>
+            <span class="arr" aria-hidden="true">${ic("arrowL",22)}</span>
+            <div class="st"><small>الدرجة المستهدفة</small><b>${pct(m.target.pct)}</b><span class="lv lv-${m.target.level}">${esc(m.target.level)}</span></div>
+          </div>
+        </div>
+        <div class="gapbar" aria-hidden="true" style="--c-w:${m.current.pct}%;--t-w:${m.target.pct}%;--cc:${LVC[m.current.level]};--tc:${LVC[m.target.level]}"><span class="zone"></span><span class="cur"></span><span class="tgt"></span></div>
+      </div>
+      <div class="mi-body">
+        <div class="need"><small>وصف الاحتياج</small>${prose(m.need)}</div>
+        <div class="two">
+          <div><h5 style="margin:0 0 10px;font-size:var(--fs-sm);color:var(--muted)">إجراءات التحسين</h5><ul class="chk">${m.actions.map(a=>`<li><span>${esc(a)}</span></li>`).join("")}</ul></div>
+          <div><h5 style="margin:0 0 10px;font-size:var(--fs-sm);color:var(--muted)">آليات تنفيذ إجراءات التحسين</h5><ul class="chk mech">${m.mechanisms.map(a=>`<li><span>${esc(a)}</span></li>`).join("")}</ul></div>
+        </div>
+      </div>
+      <dl class="mi-foot" style="margin:0">
+        <div><dt>مدة الإنجاز</dt><dd><b>${esc(m.duration)}</b></dd></div>
+        <div><dt>مسؤولية التنفيذ</dt><dd class="tags">${m.responsible.map(r=>`<span class="tag">${esc(r)}</span>`).join("")}</dd></div>
+      </dl>
+    </article>`).join("");
+  const sus = P.sustain.map(x=>`
+    <div class="sus-row">
+      <div><span class="code">${esc(x.code)}</span><p class="t" style="margin:6px 0 0">${esc(x.text)}</p></div>
+      <div class="sus-meter"><span>الدرجة الحالية</span><b>${pct(x.pct)}</b><span class="sus-bar" aria-hidden="true" style="--v:${x.pct};--g:${P.sustainTarget}"><i></i><u></u></span><span>الخط: هدف ${pct(P.sustainTarget)}</span></div>
+      <p class="a" style="margin:0">${esc(x.action)}</p>
+      <div class="tags">${x.responsible.map(r=>`<span class="tag">${esc(r)}</span>`).join("")}</div>
+    </div>`).join("");
+  return `${crumbs([{label:"الرئيسية",href:"#/"},{label:pg.title}])}
+    <h2 class="page-title" tabindex="-1">${esc(pg.title)}</h2>
+    <header class="rp-hero">
+      <div class="rp-issuer"><span>${esc(P.authority)}</span><span class="rp-tag">${esc(P.cycle)}</span></div>
+      <h2>${esc(P.title)}</h2>
+      <p class="rp-school">${esc(P.school)} — الرقم الوزاري ${esc(P.ministryNo)}</p>
+      <div class="rp-meta"><span>مدة الخطة: <b>${esc(P.period)}</b></span><span>الأداء العام: <b>${pct(P.overall.pct)} — ${esc(P.overall.level)}</b></span><span>عدد الطلاب: <b>${esc(P.students)}</b></span><span>المؤشرات المستهدفة بالتحسين: <b>${esc(P.targeted)}</b></span></div>
+    </header>
+    <nav class="rp-nav" aria-label="أقسام الخطة">
+      <button data-go="p2-an">ملخص التحليل</button><button data-go="p2-main">إجراءات التحسين</button><button data-go="p2-sus">مؤشرات المحافظة على التميز</button><button data-go="p2-tl">الجدول الزمني</button>
+    </nav>
+    <section class="rp-sec" id="p2-an" aria-labelledby="h-an"><h3 id="h-an">أولًا: ملخص التحليل</h3>
+      <p class="dom-desc">${esc(P.analysisIntro)}</p>
+      <div class="rp-card" style="padding:0;overflow:hidden">
+        <table class="an-table"><thead><tr><th>المجال / المعيار</th><th>النتيجة</th><th>المستوى</th><th>الملاحظة</th></tr></thead>
+        <tbody>${P.analysis.map(r=>`<tr class="${r.level!=="التميز"?"hl":""}"><td class="n">${esc(r.name)}</td><td class="p">${pct(r.pct)}</td><td class="l"><span class="lv lv-${r.level}">${esc(r.level)}</span></td><td>${prose(r.note)}</td></tr>`).join("")}</tbody></table>
+      </div>
+      <div class="prio">${P.priorities.map((x,i)=>`<div><b>${ar(i+1)}</b><span><small>${esc(x.label)}</small>${prose(x.text)}</span></div>`).join("")}</div>
+    </section>
+    <section class="rp-sec" id="p2-main" aria-labelledby="h-main"><h3 id="h-main">ثانيًا: إجراءات خطة التحسين في المجالات</h3>${main}</section>
+    <section class="rp-sec" id="p2-sus" aria-labelledby="h-sus"><h3 id="h-sus">ثالثًا: مؤشرات للمحافظة على التميز</h3>
+      <p class="dom-desc">${esc(P.sustainIntro)}</p><div class="sus">${sus}</div></section>
+    <section class="rp-sec" id="p2-tl" aria-labelledby="h-tl"><h3 id="h-tl">رابعًا: الجدول الزمني والمتابعة</h3>
+      <div style="overflow-x:auto"><table class="tl"><thead><tr><th>المؤشر</th>${P.timelineYears.map(y=>`<th>${esc(y)}</th>`).join("")}</tr></thead>
+        <tbody>${P.timeline.map(r=>`<tr><td class="l">${prose(r.label)}</td>
+          <td data-y="${esc(P.timelineYears[0])}">${esc(r.y1)}${r.t1?`<br><span class="tgt">الهدف: ${esc(r.t1)}</span>`:""}</td>
+          <td data-y="${esc(P.timelineYears[1])}">${esc(r.y2)}${r.t2?`<br><span class="tgt">الهدف: ${esc(r.t2)}</span>`:""}</td></tr>`).join("")}</tbody></table></div>
+      <p class="final-note">ملاحظة: ${esc(P.finalNote)}</p>
+    </section>
+    ${sourceCard({title:P.title, issuer:P.school, pages:P.source&&P.source.pages, href:P.source&&P.source.href, file:P.source&&!P.source.driveUrl&&P.source.file, button:P.source&&P.source.driveUrl?"فتح الخطة في Google Drive":"فتح الخطة الأصلية", notes:[]})}`;
+}
+
+/* ================= نتائج القدرات والتحصيلي ================= */
+const num = (n,d) => ar(d!=null ? Number(n).toFixed(d) : String(+n)).replace(".","٫");
+const kindCls = k => k==="تحصيلي" ? "c-tahsili" : "c-qudrat";
+function histChart(h, name){
+  const W=340,H=180,L=40,R=30,T=20,B=30, lo=40, hi=80;
+  const PX=28; const x = i => L+PX + (W-L-R-2*PX) * (h.length===1?0.5:i/(h.length-1));
+  const y = v => T + (H-T-B) * (1-(v-lo)/(hi-lo));
+  const grid=[40,50,60,70,80].map(g=>`<line x1="${L}" x2="${W-R}" y1="${y(g)}" y2="${y(g)}" stroke="var(--line)" stroke-width="1"/><text x="${L-6}" y="${y(g)+4}" text-anchor="end" font-size="10" fill="var(--muted)">${ar(g)}</text>`).join("");
+  /* المحور الأفقي من اليسار (الأقدم) إلى اليمين (الأحدث) */
+  const pts=h.map((p,i)=>`${x(i)},${y(p.v)}`).join(" ");
+  const dots=h.map((p,i)=>`<circle cx="${x(i)}" cy="${y(p.v)}" r="5" fill="var(--c)"/><text x="${x(i)}" y="${y(p.v)-10}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">${num(p.v)}</text><text x="${x(i)}" y="${H-10}" text-anchor="middle" font-size="11" fill="var(--muted)">${ar(p.year)}</text>`).join("");
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="مستوى أداء المدرسة عبر السنوات في ${esc(name)}: ${h.map(p=>`${ar(p.year)}: ${num(p.v)}`).join("، ")}" style="direction:ltr">${grid}<polyline points="${pts}" fill="none" stroke="var(--c)" stroke-width="2.5" stroke-dasharray="5 4"/>${dots}</svg>`;
+}
+
+const DIST_CLS = {"مرتفع":"d-hi","متوسط":"d-md","منخفض":"d-lo","منخفض جدًا":"d-vl"};
+const chg = c => c ? `<bdi dir="ltr">${ar(c).replace(".","٫").replace("%","٪")}</bdi>` : null;
+function tests1447(Y, pg){
+  const legend = `<div class="dist-legend">${Y.levelsLegend.map(l=>`<span><i class="${DIST_CLS[l.level]}"></i><b>${esc(l.level)}</b> ${ar(esc(l.range))}</span>`).join("")}</div>`;
+  const cards = Y.tests.map(t=>`
+    <section class="ts ${kindCls(t.kind)}" aria-labelledby="t-${esc(t.id)}">
+      <div class="ts-h"><h4 id="t-${esc(t.id)}">${esc(t.name)}</h4><span class="lv ts-badge">متوسط الدرجات ${num(t.score)}</span></div>
+      <div class="ts-stats">
+        <div><span>عدد المختبرين</span><b>${ar(t.testTakers)}</b></div>
+        <div><span>متوسط الدرجات</span><b>${num(t.score)}</b></div>
+        <div><span>مقدار التغيير</span>${t.change?`<b class="up">${ic("arrowUp",16)}${chg(t.change)}</b>`:`<b class="na">غير مذكور</b>`}</div>
+      </div>
+      <div class="ts-b ts-b2">
+        <div><h5>توزيع طلبة المدرسة على مستويات الأداء</h5>
+          <div class="dist" role="img" aria-label="${t.distribution.map(x=>`${x.level} ${num(x.pct,1)}٪`).join("، ")}">${t.distribution.map(x=>`<span class="${DIST_CLS[x.level]}" style="flex:${x.pct} 1 0">${x.pct>=8?`${num(x.pct,1)}٪`:""}</span>`).join("")}</div>
+          <ul class="dist-list">${t.distribution.map(x=>`<li><i class="${DIST_CLS[x.level]}"></i><span>${esc(x.level)}</span><b>${num(x.pct,1)}٪</b></li>`).join("")}</ul>
+        </div>
+        <div><h5>الترتيب على مستوى</h5>
+          <div class="pr">${t.ranks.map((r,i)=>`<div class="pr-row"><div class="top"><span>${esc(r.scope)}</span><b>أعلى من ${num(r.above)}٪</b></div>
+            <span class="pr-track" aria-hidden="true"><i style="--w:${r.above}%;--pc:${i?"#6E4691":"var(--ink-2)"}"></i></span>
+            <small>الترتيب ${ar(r.rank)} من ${ar(r.of)}</small></div>`).join("")}</div>
+          <p class="pr-note">${esc(Y.percentileNote)}</p>
+          <p class="pr-note">المجالات الفرعية: ${t.subdomains.map(esc).join("، ")}</p>
+        </div>
+      </div>
+    </section>`).join("");
+  const info = Y.school.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
+  return `
+    <header class="rp-hero">
+      <div class="rp-issuer"><span>${esc(Y.sourceIssuer)}</span><span class="rp-tag">العام ${ar(Y.year)}هـ</span></div>
+      <h2>بطاقات القدرات والتحصيلي</h2>
+      <p class="rp-school">${esc(Y.school[1][1])} — الرقم الوزاري ${esc(Y.school[0][1])}</p>
+    </header>
+    <div class="ts-sum ts-sum4">${Y.tests.map(t=>`<div class="ts-s ${kindCls(t.kind)}"><span class="k">${esc(t.name)}</span><b>${num(t.score)}</b><small>${ar(t.testTakers)} مختبرًا${t.change?`، التغيير ${chg(t.change)}`:""}</small></div>`).join("")}</div>
+    <section class="rp-sec" style="margin-top:24px"><h3 style="font-size:var(--fs-md);margin-bottom:10px">مستويات الأداء</h3>${legend}</section>
+    ${cards}
+    <section class="rp-sec"><h3 style="font-size:var(--fs-lg);margin-bottom:14px">بيانات المدرسة</h3><dl class="info" style="margin:0">${info}</dl></section>
+    ${sourceCard({title:Y.sourceTitle, issuer:Y.sourceIssuer, pages:Y.source&&Y.source.pages, href:Y.source&&Y.source.href, file:Y.source&&!Y.source.driveUrl&&Y.source.file, button:Y.source&&Y.source.driveUrl?"فتح الملف في Google Drive":"فتح الملف الأصلي", notes:Y.notes})}
+    <div class="back-row"><a class="btn btn-ghost" href="#/tests">${ic("back",18)}<span>${esc(pg.title)}</span></a></div>`;
+}
+function pageTestsIndex(){
+  const pg = DATA.pages.tests;
+  return `${crumbs([{label:"الرئيسية",href:"#/"},{label:pg.title}])}
+    <h2 class="page-title" tabindex="-1">${esc(pg.title)}</h2>
+    <div class="yr-cards">${pg.years.map(y=>`<a class="yr-card" href="#/tests/${esc(y.year)}">
+      <h3>${esc(y.label)}</h3>
+      ${y.tests ? `<div class="mini">${y.tests.map(t=>`<span class="tag">${esc(t.name)}: ${num(t.score)}</span>`).join("")}</div>` : `<p class="muted" style="color:var(--muted)">${esc(y.emptyText)}</p>`}
+      <span class="cta" style="color:var(--green-2);font-weight:600;display:flex;gap:8px;align-items:center">استعراض ${ic("arrowL",16)}</span></a>`).join("")}</div>`;
+}
+function pageTestsYear(year){
+  const pg = DATA.pages.tests, Y = pg.years.find(y=>y.year===year);
+  if(!Y) return pageNotFound();
+  const head = `${crumbs([{label:"الرئيسية",href:"#/"},{label:pg.title,href:"#/tests"},{label:Y.label}])}
+    <h2 class="page-title" tabindex="-1">${esc(Y.label)}</h2>`;
+  if(!Y.tests) return head + emptyState(Y.emptyText,"ستظهر النتائج هنا بعد إرفاقها.","doc") +
+    `<div class="back-row"><a class="btn btn-ghost" href="#/tests">${ic("back",18)}<span>${esc(pg.title)}</span></a></div>`;
+  if(Y.format==="cards1447") return head + tests1447(Y, pg);
+  const tests = Y.tests.map(t=>{
+    const d = +(t.score - t.adminAvg).toFixed(2);
+    const dTxt = d===0 ? "مساوٍ لمتوسط الإدارة" : `${d>0?"أعلى":"أقل"} من متوسط الإدارة بـ ${num(Math.abs(d))}`;
+    return `<section class="ts ${kindCls(t.kind)}" aria-labelledby="t-${esc(t.id)}">
+      <div class="ts-h"><h4 id="t-${esc(t.id)}">${esc(t.name)}</h4><span class="lv ts-badge">${num(t.score)} — ${ar(Y.year)}هـ</span></div>
+      <div class="ts-b">
+        <div><h5>متوسط الدرجة</h5>
+          <div class="cmp">
+            <div class="cmp-row"><span>المدرسة</span><b>${num(t.score)}</b><span class="bar-track"><i class="bar-fill" style="--w:${t.score}%"></i></span></div>
+            <div class="cmp-row adm"><span>متوسط الإدارة التعليمية</span><b>${num(t.adminAvg)}</b><span class="bar-track"><i class="bar-fill" style="--w:${t.adminAvg}%"></i></span></div>
+          </div>
+          <span class="diff">${esc(dTxt)} <small style="font-weight:500;color:var(--muted)">(محسوب)</small></span>
+        </div>
+        <div><h5>الترتيب على مستوى</h5>
+          <div class="pr">${t.ranks.map((r,i)=>`<div class="pr-row"><div class="top"><span>${esc(r.scope)}</span><b>أعلى من ${num(r.above)}٪</b></div>
+            <span class="pr-track" aria-hidden="true"><i style="--w:${r.above}%;--pc:${i?"#6E4691":"var(--ink-2)"}"></i></span>
+            <small>الترتيب ${ar(r.rank)} من ${ar(r.of)}</small></div>`).join("")}</div>
+          <p class="pr-note">${esc(Y.percentileNote)}</p>
+        </div>
+        <div class="hist"><h5>مستوى أداء المدرسة عبر السنوات</h5>${histChart(t.history, t.name)}</div>
+      </div>
+    </section>`;
+  }).join("");
+  const info = Y.school.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
+  return head + `
+    <header class="rp-hero">
+      <div class="rp-issuer"><span>${esc(Y.sourceIssuer)}</span><span class="rp-tag">العام ${ar(Y.year)}هـ</span></div>
+      <h2>${esc(Y.sourceTitle)}</h2>
+      <div class="rp-meta"><span>تاريخ آخر تحديث للصفحة: <b>${ar(Y.lastUpdated)}</b></span></div>
+    </header>
+    <div class="ts-sum">${Y.tests.map(t=>`<div class="ts-s ${kindCls(t.kind)}"><span class="k">${esc(t.name)}</span><b>${num(t.score)}</b><small>متوسط الإدارة التعليمية: ${num(t.adminAvg)}</small></div>`).join("")}</div>
+    ${tests}
+    <section class="rp-sec"><h3 style="font-size:var(--fs-lg);margin-bottom:14px">بيانات المدرسة</h3><dl class="info" style="margin:0">${info}</dl></section>
+    ${sourceCard({title:Y.sourceTitle, issuer:Y.sourceIssuer, pages:Y.source&&Y.source.pages, href:Y.source&&Y.source.href, file:Y.source&&!Y.source.driveUrl&&Y.source.file, button:Y.source&&Y.source.driveUrl?"فتح الملف في Google Drive":"فتح الملف الأصلي", notes:Y.notes})}
+    <div class="back-row"><a class="btn btn-ghost" href="#/tests">${ic("back",18)}<span>${esc(pg.title)}</span></a></div>`;
+}
+
+/* ================= إنجازات المدرسة ================= */
+const LVK = l => l==="دولي"?"دولي":l==="المملكة"?"المملكة":l.startsWith("تأهل")?"تأهل":"مكة";
+const FIELD_COLORS = ["#185040","#B8913F","#3F2A78","#0E7C7B","#C8413A","#3A5FB0","#6C737F"];
+function findInd(pageKey, code){
+  const R = DATA.pages[pageKey] && DATA.pages[pageKey].report; if(!R) return null;
+  for(const d of R.domains) for(const s of d.standards) for(const i of s.indicators) if(i.code===code) return i;
+  return null;
+}
+function donutSVG(parts, label){
+  const total = parts.reduce((a,p)=>a+p.v,0); let acc = 0; const r=70, c=2*Math.PI*r;
+  const segs = parts.map((p,i)=>{ const len = c*p.v/total; const seg = `<circle r="${r}" cx="100" cy="100" fill="none" stroke="${p.c}" stroke-width="34" stroke-dasharray="${len} ${c-len}" stroke-dashoffset="${-acc}" transform="rotate(-90 100 100)"/>`; acc+=len; return seg; }).join("");
+  return `<svg viewBox="0 0 200 200" role="img" aria-label="${esc(label)}">${segs}<text x="100" y="98" text-anchor="middle" font-size="34" font-weight="700" fill="var(--ink)" font-family="IBM Plex Sans Arabic, sans-serif">${ar(total)}</text><text x="100" y="124" text-anchor="middle" font-size="13" fill="var(--muted)" font-family="IBM Plex Sans Arabic, sans-serif">إنجازًا</text></svg>`;
+}
+function pageAchievements(){
+  const pg = DATA.pages.achievements, A = pg.data;
+  if(!A) return pageContent("achievements");
+  const items = A.items, n = items.length;
+  const by = k => items.reduce((m,i)=>(m[i[k]]=(m[i[k]]||0)+1,m),{});
+  const lv = by("level"), fl = by("field"), ct = by("category");
+  const highReach = (lv["دولي"]||0)+(lv["المملكة"]||0)+(lv["تأهل للمملكة"]||0);
+  const gold = items.filter(i=>(i.medal||"").includes("ذهبي")).length;
+  const silver = items.reduce((a,i)=>a+i.people.filter(p=>p.includes("الفضي")).length,0);
+  const lvBadge = l => `<span class="lvb lvb-${LVK(l)}">${esc(l)}</span>`;
+  const thumb = (i, big) => `<button class="${big?"":"th"}" type="button" data-zoom="${esc(i.image)}" data-gal="ach" data-title="${esc(i.title)}" aria-label="عرض شاهد: ${esc(i.title)}"><img src="${asset(i.image)}" alt="شريحة الشاهد: ${esc(i.title)}" loading="lazy">${big?"":`<span>${ic("zoom",14)}الشاهد</span>`}</button>`;
+  const feat = items.filter(i=>i.featured);
+  const pyrW = {"دولي":"52%","المملكة":"66%","تأهل للمملكة":"82%","منطقة مكة المكرمة":"100%"};
+  const pyr = A.levels.map(l=>`<button type="button" class="py-${LVK(l)}" style="--w:${pyrW[l]}" data-filter-level="${esc(l)}" aria-label="عرض إنجازات مستوى ${esc(l)} في السجل"><b>${ar(lv[l]||0)}</b><span class="pl">${esc(l)}</span><span class="pn">${esc(A.levelNotes[l]||"")}</span></button>`).join("");
+  const q = items.filter(i=>i.level==="تأهل للمملكة");
+  const fieldParts = A.fields.filter(f=>fl[f]).map((f,i)=>({k:f,v:fl[f],c:FIELD_COLORS[i%FIELD_COLORS.length]}));
+  const catBars = A.categories.map(c=>bar(c, (ct[c]||0)/n*100, "التميز").replace(/<span class="bv">[^<]*<\/span>/, `<span class="bv">${ar(ct[c]||0)}</span>`)).join("");
+  const award = items.filter(i=>i.medal);
+  const awardCat = t => t.split("فئة:")[1] ? t.split("فئة:")[1].split("—")[0].trim() : t;
+  const imp = A.impactGroups.map(g=>{
+    const a = findInd("report1", g.r1), b = findInd("self2", g.self);
+    const linked = items.filter(i=>i.impact.includes(g.key)).length;
+    if(!a || !b) return "";
+    return `<div class="imp-row">
+      <div><h4>${esc(g.label)}</h4><small>${esc(b.text)}</small></div>
+      <div class="imp-bars">
+        <div><span>الدورة الأولى</span><span class="bar-track" aria-hidden="true"><i class="bar-fill" style="--w:${a.pct}%;--c:#9DB4BA"></i></span><b>${pct(a.pct)}</b></div>
+        <div><span>التقويم الذاتي</span><span class="bar-track c-التميز" aria-hidden="true"><i class="bar-fill" style="--w:${b.pct}%"></i></span><b>${pct(b.pct)}</b></div>
+      </div>
+      <button class="btn btn-ghost btn-sm" type="button" data-filter-impact="${esc(g.key)}">${count(linked,["شاهد واحد","شاهدان","شواهد","شاهدًا"])}</button>
+    </div>`;}).join("");
+  const reg = items.map(i=>`
+    <article class="ach" data-level="${esc(i.level)}" data-field="${esc(i.field)}" data-cat="${esc(i.category)}" data-impact="${esc(i.impact.join(" "))}" data-search="${esc(norm([i.title,i.note,i.people.join(" "),i.field,i.level].join(" ")))}">
+      ${thumb(i,false)}
+      <div class="ab">
+        <div class="meta-tags">${lvBadge(i.level)}<span class="tag">${esc(i.field)}</span><span class="tag">${esc(i.category)}</span>${i.medal?`<span class="tag" style="border-color:#D8BC7C;color:#8A6417">${esc(i.medal)}</span>`:""}</div>
+        <p>${esc(i.title)}</p>
+        ${i.people.length?`<span class="ppl">${i.people.map(esc).join("، ")}</span>`:""}
+        ${i.note?`<span class="ppl">${esc(i.note)}</span>`:""}
+      </div>
+    </article>`).join("");
+  const chips = (name, vals, counts) => `<div class="filters" role="group" aria-label="${esc(name)}" data-group="${esc(name)}" style="margin:0">
+      <button class="chip" data-v="" aria-pressed="true">الكل</button>${vals.filter(v=>counts[v]).map(v=>`<button class="chip" data-v="${esc(v)}" aria-pressed="false">${esc(v)} <span>${ar(counts[v])}</span></button>`).join("")}</div>`;
+  return `${crumbs([{label:"الرئيسية",href:"#/"},{label:pg.title}])}
+    <h2 class="page-title" tabindex="-1">${esc(pg.title)}</h2>
+    <header class="rp-hero">
+      <div class="rp-issuer"><span>مدرسة الأمير سعود الفيصل الثانوية</span><span class="rp-tag">${ar(esc(A.period))}</span></div>
+      <h2>سجل الإنجاز</h2>
+      <p class="rp-school">${esc(A.banner)}</p>
+    </header>
+    <div class="ach-kpis">
+      <div class="ach-kpi"><b>${ar(n)}</b><span>إنجازًا موثقًا بشاهده</span></div>
+      <div class="ach-kpi"><b>${ar(highReach)}</b><span>بلغت مستوى المملكة أو أعلى أو تأهلت إليه</span></div>
+      <div class="ach-kpi"><b>${ar(gold)} + ${ar(silver)}</b><span>مستويات ذهبية وفضية في جائزة التميز للنشاط الطلابي</span></div>
+      <div class="ach-kpi"><b>${ar(ct["الطلاب"]||0)}</b><span>إنجازًا للطلاب</span></div>
+    </div>
+    <nav class="rp-nav" aria-label="أقسام الصفحة">
+      <button data-go="ac-top">إنجازات تتصدر</button><button data-go="ac-lv">مستويات الإنجاز</button><button data-go="ac-award">جائزة التميز</button><button data-go="ac-imp">الأثر على مؤشرات التقويم</button><button data-go="ac-reg">سجل الإنجازات</button><button data-go="ac-vid">الفيديو</button>
+    </nav>
+    <section class="rp-sec" id="ac-top" aria-labelledby="h-top"><h3 id="h-top">إنجازات تتصدر</h3>
+      <div class="feat">${feat.map(i=>`<article class="feat-card">${thumb(i,true)}<div class="fb">${lvBadge(i.level)}<p>${esc(i.title)}</p></div></article>`).join("")}</div>
+    </section>
+    <section class="rp-sec" id="ac-lv" aria-labelledby="h-lv"><h3 id="h-lv">مستويات الإنجاز</h3>
+      <p class="dom-desc">اضغط على أي مستوى لعرض إنجازاته في السجل.</p>
+      <div class="pyr">${pyr}</div>
+      <div class="rp-card" style="margin-top:22px;padding:0;overflow:hidden">
+        <h4 style="margin:0;padding:14px 18px;font-size:var(--fs-base);border-bottom:1px solid var(--line)">من تعليم مكة إلى المملكة</h4>
+        <table class="an-table qtable"><thead><tr><th>الإنجاز</th><th>تعليم مكة</th><th></th><th>المملكة</th></tr></thead>
+        <tbody>${q.map(i=>`<tr><td class="n">${esc(i.competition||i.field)}<small style="display:block;font-weight:500;color:var(--muted)">${esc(i.people.join("، "))}</small></td>
+          <td><span class="lvb lvb-مكة">فوز</span></td><td class="qa" aria-hidden="true">${ic("arrowL",20)}</td><td><span class="lvb lvb-تأهل">تأهل</span></td></tr>`).join("")}</tbody></table>
+      </div>
+      <div class="dist2" style="margin-top:22px">
+        <div class="rp-card"><h4 style="margin:0 0 14px;font-size:var(--fs-base)">حسب المجال</h4>
+          <div class="donut">${donutSVG(fieldParts.map(p=>({v:p.v,c:p.c})),"توزيع الإنجازات حسب المجال: "+fieldParts.map(p=>`${p.k} ${ar(p.v)}`).join("، "))}
+            <ul class="leg">${fieldParts.map(p=>`<li><i style="background:${p.c}"></i><span>${esc(p.k)}</span><b>${ar(p.v)}</b></li>`).join("")}</ul></div></div>
+        <div class="rp-card"><h4 style="margin:0 0 14px;font-size:var(--fs-base)">حسب الفئة</h4><div class="bars">${catBars}</div></div>
+      </div>
+    </section>
+    <section class="rp-sec" id="ac-award" aria-labelledby="h-award"><h3 id="h-award">جائزة التميز للنشاط الطلابي ١٤٤٧هـ</h3>
+      <div class="notice" role="note">${ic("award",18)}<span>${esc(A.banner)}</span></div>
+      <div class="board">${award.map(i=>`<div class="medal"><span class="ic">${ic("award",22)}</span><h4>${esc(awardCat(i.title))}</h4>
+        ${i.people.length && i.category==="الطلاب" ? `<ul>${i.people.map(p=>`<li>${esc(p)}</li>`).join("")}</ul>` : `<span class="gold">المستوى ${esc(i.medal)}</span>`}
+        <button class="btn btn-ghost btn-sm" type="button" data-zoom="${esc(i.image)}" data-title="${esc(i.title)}">${ic("zoom",16)}<span>الشاهد</span></button></div>`).join("")}</div>
+    </section>
+    <section class="rp-sec" id="ac-imp" aria-labelledby="h-imp"><h3 id="h-imp">الأثر على مؤشرات التقويم</h3>
+      <p class="dom-desc">${esc(A.impactNote)}</p>
+      <div class="imp">${imp}</div>
+    </section>
+    <section class="rp-sec" id="ac-reg" aria-labelledby="h-reg"><h3 id="h-reg">سجل الإنجازات</h3>
+      <div class="reg-tools">
+        <label class="search"><span class="sr-only">ابحث في الإنجازات</span><input type="search" id="aq" placeholder="ابحث باسم الإنجاز أو الطالب أو المسابقة" autocomplete="off"><span class="s-ic">${ic("search",20)}</span></label>
+        ${chips("المستوى", A.levels, lv)}
+        ${chips("المجال", A.fields, fl)}
+      </div>
+      <p class="search-status" id="aStatus" aria-live="polite"></p>
+      <div class="reg" id="reg">${reg}</div>
+      <div class="no-results" id="aNoRes">${emptyState("لا توجد إنجازات مطابقة","غيّر كلمة البحث أو التصفية.","search")}</div>
+    </section>
+    <section class="rp-sec" id="ac-vid" aria-labelledby="h-vid"><h3 id="h-vid">فيديو الإنجازات</h3>
+      <div class="video-card"><span class="play" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <div><h3>${esc(A.video.title)}</h3><p>${esc(A.video.note)}</p></div>
+        <a class="btn" href="${esc(A.video.url)}" ${ext}>${ic("ext",18)}<span>مشاهدة الفيديو</span></a></div>
+    </section>
+    <p class="src" style="margin-top:22px">${esc(A.sourceNote)}</p>`;
+}
+function bindAchievements(){
+  const reg = document.getElementById("reg"); if(!reg) return;
+  const cards=[...reg.querySelectorAll(".ach")], q=document.getElementById("aq"), status=document.getElementById("aStatus"), nores=document.getElementById("aNoRes");
+  const state={"المستوى":"","المجال":"",impact:""};
+  const apply=()=>{ const t=norm(q.value); let k=0;
+    cards.forEach(c=>{ const ok=(!state["المستوى"]||c.dataset.level===state["المستوى"])&&(!state["المجال"]||c.dataset.field===state["المجال"])&&(!state.impact||c.dataset.impact.split(" ").includes(state.impact))&&(!t||c.dataset.search.includes(t)); c.hidden=!ok; if(ok)k++; });
+    nores.classList.toggle("show",k===0); status.textContent=(t||state["المستوى"]||state["المجال"]||state.impact)?`المعروض: ${ar(k)} من ${ar(cards.length)}`:""; };
+  const setChip=(group,v)=>{ const g=document.querySelector(`[data-group="${group}"]`); if(!g) return; state[group]=v; g.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.v===v))); };
+  document.querySelectorAll("[data-group] .chip").forEach(b=>b.addEventListener("click",()=>{ state.impact=""; setChip(b.closest("[data-group]").dataset.group,b.dataset.v); apply(); }));
+  q.addEventListener("input",apply);
+  const goReg=()=>{ const s=document.getElementById("ac-reg"); s.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"}); };
+  document.querySelectorAll("[data-filter-level]").forEach(b=>b.addEventListener("click",()=>{ state.impact=""; setChip("المجال",""); setChip("المستوى",b.dataset.filterLevel); q.value=""; apply(); goReg(); }));
+  document.querySelectorAll("[data-filter-impact]").forEach(b=>b.addEventListener("click",()=>{ setChip("المستوى",""); setChip("المجال",""); state.impact=b.dataset.filterImpact; q.value=""; apply(); goReg(); }));
+}
+
+function pageAdmin(){
+  return `${crumbs([{label:"الرئيسية",href:"#/"},{label:"الإدارة"}])}
+    <div class="empty lock"><div class="em-ic">${ic("lock",30)}</div>
+      <strong class="page-title" tabindex="-1" style="font-size:var(--fs-lg)">لم يتم تفعيل حساب المسؤول بعد</strong>
+      <p>هذه البوابة للقراءة فقط حاليًا.</p></div>`;
+}
+function pageNotFound(){
+  return `<h2 class="page-title sr-only" tabindex="-1">الصفحة غير موجودة</h2>` + emptyState("الصفحة غير موجودة","تحقق من الرابط أو عد إلى الرئيسية.","info") +
+    `<div style="text-align:center;margin-top:18px"><a class="btn btn-primary" href="#/">الرئيسية</a></div>`;
+}
+
+/* ================= الموجّه ================= */
+function route(){
+  const path = (location.hash.replace(/^#\/?/,"") || "").replace(/\/+$/,"");
+  const [a="", b] = path.split("/");
+  /* تحويل الروابط القديمة: ‎#/self-evaluation/<id>‎ ← ‎#/domains/<id>‎ */
+  if(a==="self-evaluation" && b){ location.replace(`#/domains/${b}`); return; }
+  let html, section = a, scrollTarget = null;
+  switch(a){
+    case "": html = pageHome(); break;
+    case "domains":
+      if(b){ html = pageDomain(b); } else { html = pageHome(); scrollTarget = "domains"; }
+      section = ""; break;
+    case "intro": html = pageContent("intro"); break;
+    case "vision": html = pageVision(); break;
+    case "achievements": html = pageAchievements(); break;
+    case "report-1": html = pageReport1(); break;
+    case "plan-1": html = pagePlan1(); break;
+    case "self-evaluation": html = pageSelf2(); break;
+    case "plan-2": html = pagePlan2(); break;
+    case "tests": html = b ? pageTestsYear(b) : pageTestsIndex(); section = b ? `tests/${b}` : "tests"; break;
+    case "admin": html = pageAdmin(); section = null; break;
+    default: html = pageNotFound(); section = null;
+  }
+  const isHome = a==="" || (a==="domains" && !b);
+  document.getElementById("masthead").classList.toggle("compact", !isHome);
+  view.innerHTML = html;
+  setActive(section);
+  bindDomain();
+  bindReveal();
+  bindReport();
+  bindPlan();
+  bindAchievements();
+  closeMenu(false);
+  if(scrollTarget){
+    const el = document.getElementById(scrollTarget);
+    el.scrollIntoView({block:"start"});
+    document.getElementById("domH").focus({preventScroll:true});
+  } else {
+    window.scrollTo(0,0);
+    const t = view.querySelector(".page-title");
+    if(t && a!=="") t.focus({preventScroll:true});
+  }
+  const titleBit = isHome ? "" : (view.querySelector(".page-title")?.textContent || "");
+  document.title = titleBit ? `${titleBit} | ${DATA.meta.siteTitle}` : DATA.meta.siteTitle;
+}
+
+/* ================= القائمة على الجوال ================= */
+const sidebar = document.getElementById("sidebar"), scrim = document.getElementById("scrim"), menuBtn = document.getElementById("menuBtn");
+const mobileQ = window.matchMedia("(max-width:980px)");
+function openMenu(){ sidebar.classList.add("open"); scrim.classList.add("show"); menuBtn.setAttribute("aria-expanded","true"); document.body.style.overflow="hidden"; setTimeout(()=>document.getElementById("sideClose").focus(),60); }
+function closeMenu(refocus=true){ if(!sidebar.classList.contains("open")) return; sidebar.classList.remove("open"); scrim.classList.remove("show"); menuBtn.setAttribute("aria-expanded","false"); document.body.style.overflow=""; if(refocus) menuBtn.focus(); }
+menuBtn.addEventListener("click", openMenu);
+scrim.addEventListener("click", ()=>closeMenu());
+document.getElementById("sideClose").addEventListener("click", ()=>closeMenu());
+document.addEventListener("keydown", e=>{
+  if(!sidebar.classList.contains("open")) return;
+  if(e.key==="Escape"){ closeMenu(); return; }
+  if(e.key==="Tab" && mobileQ.matches){ /* حصر التركيز داخل الدرج */
+    const f = [...sidebar.querySelectorAll("a,button")]; const first=f[0], last=f[f.length-1];
+    if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
+  }
+});
+mobileQ.addEventListener?.("change", ()=>{ if(!mobileQ.matches) closeMenu(false); });
+
+/* ================= عارض الصور ================= */
+const lb = document.getElementById("lightbox"), lbImg = document.getElementById("lbImg"), lbStage = document.getElementById("lbStage"), lbZoom = document.getElementById("lbZoom");
+let lbReturn = null;
+function setZoom(on){ lbStage.classList.toggle("zoomed",on); lbZoom.setAttribute("aria-pressed",String(on)); lbZoom.textContent = on ? "ملاءمة الشاشة" : "تكبير"; }
+let lbList = [], lbIdx = 0;
+const lbPrev = document.getElementById("lbPrev"), lbNext = document.getElementById("lbNext");
+function lbShow(el){ lbImg.src = asset(el.dataset.zoom); lbImg.alt = el.dataset.title || ""; document.getElementById("lbTitle").textContent = el.dataset.title || ""; setZoom(false); }
+function lbStep(d){ if(lbList.length<2) return; lbIdx = (lbIdx + d + lbList.length) % lbList.length; lbShow(lbList[lbIdx]); }
+document.addEventListener("click", e=>{
+  const z = e.target.closest("[data-zoom]"); if(!z) return;
+  lbReturn = z;
+  lbList = z.dataset.gal ? [...document.querySelectorAll(`[data-gal="${z.dataset.gal}"]`)].filter(x=>x.offsetParent!==null) : [z];
+  lbIdx = Math.max(0, lbList.indexOf(z));
+  lbPrev.hidden = lbNext.hidden = lbList.length < 2;
+  lbShow(z);
+  if (typeof lb.showModal === "function") lb.showModal(); else lb.setAttribute("open","");
+  document.getElementById("lbClose").focus();
+});
+lbPrev.addEventListener("click", ()=>lbStep(-1));
+lbNext.addEventListener("click", ()=>lbStep(1));
+lb.addEventListener("keydown", e=>{ if(e.key==="ArrowLeft"){ e.preventDefault(); lbStep(1); } if(e.key==="ArrowRight"){ e.preventDefault(); lbStep(-1); } });
+lbZoom.addEventListener("click", ()=>setZoom(!lbStage.classList.contains("zoomed")));
+lbImg.addEventListener("click", ()=>setZoom(!lbStage.classList.contains("zoomed")));
+lbStage.addEventListener("click", e=>{ if(e.target===lbStage) lb.close(); });
+document.getElementById("lbClose").addEventListener("click", ()=>lb.close());
+lb.addEventListener("close", ()=>{ lbImg.removeAttribute("src"); if(lbReturn){ lbReturn.focus(); lbReturn=null; } });
+
+/* فتح الملف الأصلي: عند تشغيل الصفحة من الجهاز (file:) تُستخدم النسخة المضمنة إن وجدت */
+const pdfCache = {};
+document.addEventListener("click", e=>{
+  const a = e.target.closest("a[data-pdf]"); if(!a) return;
+  const key = a.dataset.pdf, b64 = window.__PDFS__ && window.__PDFS__[key];
+  const remoteUnreachable = location.protocol === "file:" || location.protocol === "blob:" || location.origin === "null";
+  if(!b64 || !remoteUnreachable) return;
+  e.preventDefault();
+  if(!pdfCache[key]){
+    const bin = atob(b64), bytes = new Uint8Array(bin.length);
+    for(let i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    pdfCache[key] = URL.createObjectURL(new Blob([bytes], {type:"application/pdf"}));
+  }
+  const w = window.open(pdfCache[key], "_blank");
+  if(!w) location.href = pdfCache[key];
+});
+document.getElementById("skipLink").addEventListener("click", e=>{ e.preventDefault(); view.focus(); });
+
+/* ================= التشغيل ================= */
+DataSource.getPublished().then(d=>{
+  DATA = d; renderNav(); route();
+  window.addEventListener("hashchange", route);
+}).catch(err=>{
+  view.innerHTML = emptyState("تعذر تحميل المحتوى", err.message, "info");
+});
+</script>
+</body>
+</html>
