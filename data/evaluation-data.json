@@ -4072,6 +4072,158 @@
           }
         }
       ]
+    },
+    "formations": {
+      "title": "ملفات التشكيلات المدرسية",
+      "rootUrl": "https://drive.google.com/drive/folders/1mT0ZXulBgkV7D3QY3P3Jm6vuVJx6yHbs",
+      "folders": [
+        {
+          "name": "مدير المدرسة",
+          "url": "https://drive.google.com/drive/folders/1SiwJ0U3y0yNYM1WnquTstClQO0IJu7qi"
+        },
+        {
+          "name": "وكيل الشؤون التعليمية",
+          "url": "https://drive.google.com/drive/folders/1AwnBZO4eOX9NpPQOWhI1ZO4a58Eq_3Do"
+        },
+        {
+          "name": "وكيل شؤون الطلاب",
+          "url": "https://drive.google.com/drive/folders/1TcJNUlDGzotPHVHsa9LKdSq1Mfv0EjsU"
+        },
+        {
+          "name": "وكيل الشؤون المدرسية",
+          "url": "https://drive.google.com/drive/folders/1X3hG03IcphdXdZkuG9Dj855SQQTgyybt"
+        },
+        {
+          "name": "التوجيه الطلابي",
+          "url": "https://drive.google.com/drive/folders/1_b7PSC0v3tcVuVZ9ymtYbaO4YeHdLXqy"
+        },
+        {
+          "name": "النشاط الطلابي",
+          "url": "https://drive.google.com/drive/folders/1XrLQA2rQUL88hNM6uyir2fDw6WB6Mc7c",
+          "children": [
+            {
+              "name": "خطة المدرسة الفصلية للأنشطة والفعاليات",
+              "url": "https://drive.google.com/drive/folders/1qXCI85CdGLa5_DuGT7bmeBNpPKTt7S5i"
+            },
+            {
+              "name": "خطة الأنشطة الصفية",
+              "url": "https://drive.google.com/drive/folders/1PEf5LkDccyO-2RM4PtEq7qYEnqrfWCbC",
+              "children": [
+                {
+                  "name": "بطاقات التنفيذ من الأسبوع ١ - ٩",
+                  "url": "https://drive.google.com/drive/folders/1K2xCrwTwTd2LjLIPB1BWhqW3Ll1qFnQ2"
+                }
+              ]
+            },
+            {
+              "name": "خطة الأنشطة اللاصفية",
+              "url": "https://drive.google.com/drive/folders/1iD1DfTNNze_qm37fvLimhdKSok6qA4yI",
+              "children": [
+                {
+                  "name": "بطاقات التنفيذ من الأسبوع ١ - ٩",
+                  "url": "https://drive.google.com/drive/folders/1Y85YEH7WXeZ5u0o9G3VQbllJy_dqqylR",
+                  "children": [
+                    {
+                      "name": "بطاقات التنفيذ- الاصطفاف الصباحي",
+                      "url": "https://drive.google.com/drive/folders/1fMpqlnUJNCZMPAE2qzBzZ184Erpl50M1"
+                    },
+                    {
+                      "name": "بطاقات التنفيذ- فترة الظهر",
+                      "url": "https://drive.google.com/drive/folders/1Udx4QbGU54IeiH4M7n8VUX9ze15-p3LM"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "الأيام والمناسبات",
+              "url": "https://drive.google.com/drive/folders/1g566VcXxADEaREFlUJs68sNUXqd-QCGg"
+            },
+            {
+              "name": "سجل المسابقات",
+              "url": "https://drive.google.com/drive/folders/10yxI9NrVU_IsXnnVEJeSY2fWHvjuX46e",
+              "children": [
+                {
+                  "name": "البرامج والمسابقات المنفذة",
+                  "url": "https://drive.google.com/drive/folders/1IrIZxBIzZB66jtrdflotJLq4A_ZbmFBD",
+                  "children": [
+                    {
+                      "name": "مسابقة المعرفة الإحصائية (انتهى)",
+                      "url": "https://drive.google.com/drive/folders/1o0Lc6dgqI0V-MNTC5z9nDDlWNW25gwNj"
+                    },
+                    {
+                      "name": "جائزة الأميرة صيتة (تحت التنفيذ)",
+                      "url": "https://drive.google.com/drive/folders/1WKV8_uPiocDzWJdWxa9TpdrsAx2V7Cwd"
+                    },
+                    {
+                      "name": "إنجاز السعودية (تحت التنفيذ)",
+                      "url": "https://drive.google.com/drive/folders/1Vv1S5kNFDUKN4V0l_MqBpdVVknQHJaQ8"
+                    },
+                    {
+                      "name": "حفظ القرآن (تحت التنفيذ)",
+                      "url": "https://drive.google.com/drive/folders/1FWJLDNwQcaMVTeqWc1s0fEjgXEnzUEmk"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "البرامج والمسابقات المستجدة",
+              "url": "https://drive.google.com/drive/folders/1NDAtL2n6T2pHJ9XOCiYsGjp_YPQxKAzK",
+              "children": [
+                {
+                  "name": "العودة للدراسة",
+                  "url": "https://drive.google.com/drive/folders/1ZWbqJemCq1hNZTpWTJyBhsXZ0h1Y0R-X"
+                },
+                {
+                  "name": "اكتشف مسارك",
+                  "url": "https://drive.google.com/drive/folders/1rve6VybQ2HkumpM9By6quZvb2qWjXUvV"
+                },
+                {
+                  "name": "البرنامج التوعوي للأمن السيبراني",
+                  "url": "https://drive.google.com/drive/folders/1dWeEOSHduKQaBVY0KK01HWIBSgFbKFuL"
+                }
+              ]
+            },
+            {
+              "name": "سجل مجلس الحوار الطلابي",
+              "url": "https://drive.google.com/drive/folders/1KYIRuRrbuklJIM1LTCmt22pKsy6DfGql"
+            },
+            {
+              "name": "سجل النشرات",
+              "url": "https://drive.google.com/drive/folders/1NFrGiAVBTJjeNKmEKPMNeF3kxFGKckcQ"
+            },
+            {
+              "name": "الشراكة المجتمعية",
+              "url": "https://drive.google.com/drive/folders/1Uq49NiLMSBf4NUYVu86YuBJ_AxPkHubs"
+            },
+            {
+              "name": "سجل رائد النشاط",
+              "url": "https://drive.google.com/drive/folders/1MapsEhWtpk2AAzWv0EmvPa9rSU1YSkXP"
+            }
+          ]
+        },
+        {
+          "name": "الموهوبين",
+          "url": "https://drive.google.com/drive/folders/1ET6RxNuIVh11US5umrRkNeZ0X7hINg4j"
+        },
+        {
+          "name": "التربية الخاصة",
+          "url": "https://drive.google.com/drive/folders/1tFPH618gxxHpCVQj3gc6UuVIMJhdpXjP"
+        },
+        {
+          "name": "التوجيه الصحي",
+          "url": "https://drive.google.com/drive/folders/1mmLJlJihMP_tbD-a_Q2FFGcFIhvjvM7u"
+        },
+        {
+          "name": "الأمن والسلامة",
+          "url": "https://drive.google.com/drive/folders/1IrSASoHjbUzWuBXpNyCPzLr5qimUobvI"
+        },
+        {
+          "name": "الشراكة المجتمعية والعمل التطوعي",
+          "url": "https://drive.google.com/drive/folders/1L4ZWJSUBkvmGpJhzMmJyfj3kEg5J72nC"
+        }
+      ]
     }
   },
   "domains": [

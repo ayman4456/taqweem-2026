@@ -666,6 +666,15 @@ button{font:inherit;color:inherit}
 .std-link{flex:none;display:flex;align-items:center;padding:12px 18px;border-inline-start:1px solid var(--line)}
 .std-panel{border-top:1px solid var(--line);background:var(--bg);padding:8px clamp(12px,2.5vw,20px) 18px}
 .std-panel[hidden]{display:none}
+/* ملفات التشكيلات: تفرعات متداخلة */
+.fm-root{margin:0 0 18px}
+.fm-leaf{cursor:default}
+.fm-leaf:hover{background:transparent}
+.fm-sub{margin-top:10px;gap:10px;padding-inline-start:clamp(10px,2.5vw,18px);border-inline-start:2px solid var(--gold-line)}
+.fm-sub .std{box-shadow:none}
+.fm-sub .std-toggle{min-height:56px;padding-block:12px}
+.fm-sub .std-num{width:32px;height:32px;font-size:.9rem}
+.fm-sub .std-name{font-size:1rem}
 
 .inds{list-style:none;margin:0;padding:10px 0 4px;display:grid;gap:12px;position:relative;counter-reset:none}
 .inds::before{content:"";position:absolute;top:30px;bottom:30px;right:21px;width:2px;border-radius:2px;
@@ -982,6 +991,7 @@ function pageHome(){
       <div class="hero-actions">
         <a class="btn btn-primary" href="#/domains">استعراض مجالات التقويم</a>
         <a class="btn btn-ghost" href="#/report-1">${esc(DATA.pages.report1.title)}</a>
+        <a class="btn btn-ghost" href="#/formations">ملفات التشكيلات المدرسية</a>
       </div>
     </div>
     <div class="photo-col">
@@ -1771,6 +1781,40 @@ function bindAchievements(){
   document.querySelectorAll("[data-filter-impact]").forEach(b=>b.addEventListener("click",()=>{ setChip("المستوى",""); setChip("المجال",""); state.impact=b.dataset.filterImpact; q.value=""; apply(); goReg(); }));
 }
 
+/* ================= ملفات التشكيلات المدرسية ================= */
+const W_SUB = ["مجلد فرعي واحد","مجلدان فرعيان","مجلدات فرعية","مجلدًا فرعيًا"];
+function fmNode(f, num, path){
+  const kids = f.children || [];
+  const pid = `fm-${path}`;
+  const titles = `<span class="std-num" aria-hidden="true">${ar(num)}</span>
+          <span class="std-titles"><span class="std-name">${esc(f.name)}</span>${kids.length?`<span class="std-count">${count(kids.length,W_SUB)}</span>`:""}</span>`;
+  const head = kids.length
+    ? `<button class="std-toggle" type="button" aria-expanded="false" aria-controls="${pid}">${titles}<span class="std-chev">${ic("chev",20)}</span></button>`
+    : `<div class="std-toggle fm-leaf">${titles}</div>`;
+  return `<section class="std">
+      <div class="std-head">
+        ${head}
+        <div class="std-link"><a class="btn btn-ghost btn-sm" href="${esc(f.url)}" ${ext} aria-label="فتح المجلد: ${esc(f.name)}">${ic("folder",17)}<span>فتح المجلد</span></a></div>
+      </div>
+      ${kids.length ? `<div class="std-panel" id="${pid}" hidden><div class="stds fm-sub">${kids.map((c,i)=>fmNode(c,i+1,`${path}-${i+1}`)).join("")}</div></div>` : ""}
+    </section>`;
+}
+function pageFormations(){
+  const pg = DATA.pages.formations;
+  return `${crumbs([{label:"الرئيسية",href:"#/"},{label:pg.title}])}
+    <h2 class="page-title" tabindex="-1">${esc(pg.title)}</h2>
+    <div class="fm-root"><a class="btn btn-primary" href="${esc(pg.rootUrl)}" ${ext}>${ic("folder",18)}<span>فتح المجلد الرئيسي في Google Drive</span></a></div>
+    <div class="stds" id="fmTree">${(pg.folders||[]).map((f,i)=>fmNode(f,i+1,String(i+1))).join("")}</div>
+    <div class="back-row"><a class="btn btn-ghost" href="#/">${ic("back",18)}<span>العودة إلى الرئيسية</span></a></div>`;
+}
+function bindFormations(){
+  const root = document.getElementById("fmTree"); if(!root) return;
+  root.addEventListener("click", e=>{
+    const t = e.target.closest("button.std-toggle"); if(!t) return;
+    const sec = t.closest(".std"); setStd(sec, !sec.classList.contains("open"));
+  });
+}
+
 function pageAdmin(){
   return `${crumbs([{label:"الرئيسية",href:"#/"},{label:"الإدارة"}])}
     <div class="empty lock"><div class="em-ic">${ic("lock",30)}</div>
@@ -1801,6 +1845,7 @@ function route(){
     case "plan-1": html = pagePlan1(); break;
     case "self-evaluation": html = pageSelf2(); break;
     case "plan-2": html = pagePlan2(); break;
+    case "formations": html = pageFormations(); section = ""; break;
     case "tests": html = b ? pageTestsYear(b) : pageTestsIndex(); section = b ? `tests/${b}` : "tests"; break;
     case "admin": html = pageAdmin(); section = null; break;
     default: html = pageNotFound(); section = null;
@@ -1814,6 +1859,7 @@ function route(){
   bindReport();
   bindPlan();
   bindAchievements();
+  bindFormations();
   closeMenu(false);
   if(scrollTarget){
     const el = document.getElementById(scrollTarget);
